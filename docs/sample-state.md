@@ -1,12 +1,16 @@
+```js
+
 {
-  currentUser: {
-    id: 1,
-    username: "bob"
+  session: {
+    currentUser: {
+      id: 1,
+      username: "bob"
+    }
   },
-  forms: {
-    signUp: {errors: []},
-    logIn: {errors: []},
-    createPhoto: {errors: ["Title can't be Blank"]}
+  errors: {
+    signUp: [],
+    logIn: [],
+    createPhoto: []
   },
   photos: {
     1: {
@@ -15,16 +19,8 @@
       title: "Photo title",
       description: "Photo description",
       user_id: 1,
-    }
-  },
-  photo: {
-    1: {
-      id: 1,
-      url: "/photo/url"
-      title: "Photo title",
-      description: "Photo description",
-      user_id: 1,
-    }
+    },
+    photo: 1
   },
   userDetail: {
     id: 1,
@@ -37,3 +33,5 @@
     photos: []
   }
 }
+
+```
