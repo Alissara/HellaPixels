@@ -17,12 +17,11 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>
     <nav>
-      <Link to="/" className="header-link">
-        HellaPixels!
-      </Link>
+      <Link to="/" className="header-link">HellaPixels!</Link>
       <GreetingContainer/>
     </nav>
-
+    <footer>
+    </footer>
   </div>
 );
 

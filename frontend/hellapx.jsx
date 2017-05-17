@@ -16,7 +16,6 @@ import Root from './components/root';
 // window.signup = signup;
 
 document.addEventListener('DOMContentLoaded', () => {
-  Modal.setAppElement(document.body);
   let store;
   if (window.currentUser) {
     const preloadedState = { session: { currentUser: window.currentUser } };
@@ -25,6 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
+
+  Modal.setAppElement(document.body);
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
 });
