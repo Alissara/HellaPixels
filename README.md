@@ -4,7 +4,7 @@
 
 [Trello link][trello]
 
-[heroku]: http://www.herokuapp.com
+[heroku]: https://hellapixels.herokuapp.com/
 [trello]: https://trello.com/b/35ntBTRh/hellapixels
 
 ## Minimum Viable Product
