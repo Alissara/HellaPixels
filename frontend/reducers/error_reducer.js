@@ -13,7 +13,7 @@ const ErrorReducer = (state = defaultError, action) => {
   switch(action.type) {
     case RECEIVE_ERRORS:
       const errors = action.errors;
-      return merge({}, defaultError, {errors});
+      return merge({}, defaultError, errors);
     default:
       return state;
   }
