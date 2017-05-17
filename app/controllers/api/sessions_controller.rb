@@ -10,7 +10,7 @@ class Api::SessionsController < ApplicationController
       render 'api/users/show'
     else
       render(
-        json: { logIn: ["Invalid username/password combination"] },
+        json: { authForm: ["Invalid username/password combination"] },
         status: 401
       )
     end

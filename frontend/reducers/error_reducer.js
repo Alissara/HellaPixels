@@ -1,10 +1,9 @@
 import merge from 'lodash/merge';
 
-import { RECEIVE_ERRORS } from '../actions/session_actions';
+import { RECEIVE_ERRORS, CLEAR_ERRORS } from '../actions/session_actions';
 
 const defaultError = Object.freeze({
-  signUp: [],
-  logIn: [],
+  authForm: [],
   createPhoto: []
 });
 
@@ -14,6 +13,8 @@ const ErrorReducer = (state = defaultError, action) => {
     case RECEIVE_ERRORS:
       const errors = action.errors;
       return merge({}, defaultError, errors);
+    case CLEAR_ERRORS:
+      return defaultError;
     default:
       return state;
   }

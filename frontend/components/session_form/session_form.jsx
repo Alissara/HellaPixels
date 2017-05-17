@@ -10,12 +10,19 @@ class SessionForm extends React.Component {
       username: '',
       password: '',
       modalOpen: false,
-      logIn: false
+      logIn: false,
     };
 
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.loadDemo = this.loadDemo.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.loggedIn) {
+      this.props.history.push('/home');
+    }
   }
 
   update(field) {
@@ -34,11 +41,27 @@ class SessionForm extends React.Component {
     }
   }
 
-  //renderErrors()
+  loadDemo() {
+    const user = {username:'Guest', password:'123456'};
+    this.props.login({user});
+  }
+
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) =>(
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
 
   closeModal() {
     this.setState({ modalOpen: false });
     // style.content.opacity = 0;
+    this.props.clearErrors();
   }
 
   openModal(bool) {
@@ -68,9 +91,10 @@ class SessionForm extends React.Component {
           <button onClick={this.closeModal}>X</button>
 
           <div className="login-form-container">
-            <form onSubmit={this.handleSubmit} className="login-form-box">
+            <form className="login-form-box">
               <br/>
               {this.formHeader()}
+              {this.renderErrors()}
 
               <div className="login-form">
                 <br/>
@@ -96,9 +120,9 @@ class SessionForm extends React.Component {
 
                 <br/>
 
-                <input type="submit" value="Submit" />
+                <input onClick={this.handleSubmit} type="submit" value="Submit" />
                 <p>or</p>
-                <button>Guest Demo</button>
+                <button onClick={this.loadDemo}>Guest Demo</button>
               </div>
             </form>
           </div>
