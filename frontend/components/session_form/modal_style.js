@@ -17,8 +17,8 @@ const style = {
     border          : '1px solid #ccc',
     padding         : '20px',
     zIndex          : 11,
-    opacity         : '0',
-    transition      : 'opacity 1s'
+    // opacity         : '',
+    transition      : 'opacity 2s'
   }
 };
 

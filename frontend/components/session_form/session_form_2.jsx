@@ -10,13 +10,26 @@ class SessionForm extends React.Component {
       username: '',
       password: '',
       modalOpen: false,
-      logIn: false
+      logIn: false,
     };
 
-    this.closeModal = this.closeModal.bind(this);
-    this.openModal = this.openModal.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.onModalClose = this.onModalClose.bind(this);
+    this.onModalOpen = this.onModalOpen.bind(this);
+    this.update = this.update.bind(this);
   }
+
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.loggedIn) {
+  //     this.props.history.push('/');
+  //   }
+  // }
+
+	componentDidUpdate() {
+		if (this.props.loggedIn) {
+			this.props.history.push("/");
+		}
+	}
 
   update(field) {
     return e => {
@@ -34,38 +47,24 @@ class SessionForm extends React.Component {
     }
   }
 
-  //renderErrors()
 
-  closeModal() {
-    this.setState({ modalOpen: false });
-    // style.content.opacity = 0;
-  }
 
-  openModal(bool) {
-    this.setState({
-      modalOpen: true,
-      logIn: bool
-    });
-    // style.content.opacity = 100;
-  }
-
-  formHeader() {
-    return (this.state.logIn) ? <h3>Log In to HellaPixels</h3> : <h3>Join HellaPixels</h3>;
-  }
 
   render() {
     return (
       <nav className="login-signup">
-        <button onClick={this.openModal.bind(this, true)}>Login!</button>
-        <button onClick={this.openModal.bind(this, false)}>Sign up!</button>
+        <button onClick={this.handleClick(true)}>Login!</button>
+        <button onClick={this.handleClick(false)}>Sign up!</button>
 
         <Modal
           contentLabel="Modal"
           isOpen={this.state.modalOpen}
-          onRequestClose={this.closeModal}
-          style={style}>
+          onRequestClose={this.onModalClose}
+          style={style}
+          onAfterOpen={this.onModalOpen}
+        >
+          <button onClick={this.onModalClose}>X</button>
 
-          <button onClick={this.closeModal}>X</button>
 
           <div className="login-form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -103,12 +102,10 @@ class SessionForm extends React.Component {
             </form>
           </div>
 
-
         </Modal>
       </nav>
     );
   }
-
 }
 
 export default withRouter(SessionForm);
