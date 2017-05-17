@@ -79,9 +79,9 @@ class Greeting extends React.Component {
             onAfterOpen={this.onModalOpen}
           >
             <button onClick={this.onModalClose}>X</button>
+              Authform:
               <AuthRoute path="/login" component={SessionFormContainer} />
               <AuthRoute path="/signup" component={SessionFormContainer} />
-              AuthForm
           </Modal>
         </nav>
       );
