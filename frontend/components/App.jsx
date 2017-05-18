@@ -8,20 +8,22 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import GreetingContainer from './greeting/greeting_container';
-import SessionFormContainer from './session_form/session_form_container';
-
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
+import GreetingContainer from './greeting/greeting_container';
+import SessionFormContainer from './session_form/session_form_container';
 
 const App = () => (
   <div>
     <nav>
-      <Link to="/" className="header-link">HellaPixels!</Link>
-      <GreetingContainer/>
+      <Link to="/home" className="header-link">HellaPixels!</Link>
+      <AuthRoute path="/" component={SessionFormContainer}/>
+      <ProtectedRoute path="/home" component={GreetingContainer}/>
     </nav>
-    <footer>
-    </footer>
+    <main>
+      <Route exact path="/" render={() => <h1>SPLASHPAGE</h1>} />
+      <Route path="/home" render={() => <h1>HOMEPAGE</h1>} />
+    </main>
   </div>
 );
 
