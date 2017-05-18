@@ -6,13 +6,13 @@
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-  height: 700px;
+  height: 800px;
 }
 
 .hero-text {
-  color: #282828;
+  color: $charcoal;
   text-align: center;
-  font-family: 'Raleway';
+  font-family: $raleway;
   position: absolute;
   top: 30%;
   left: 50%;
@@ -22,22 +22,45 @@
 
 .hero-text > h1 {
   font-size: 40px;
+  margin: 30px 0px;
 }
 
 .hero-text > h4 {
   font-size: 27px;
+  margin: 30px 0px;
 }
 
 .hero-text > button {
   padding: 10px;
-  border: 2px solid #202020;
+  border: 2px solid $charcoal;
   background: none;
-  color: #202020;
+  color: $charcoal;
   font-family: sans-serif;
   font-size: 15px;
+  width: 75px;
 }
 
-.hero-text > button:hover {
-  background-color: #202020;
-  color: #fbf2ea;
+.hero-text > button:hover,
+.foot-right a:hover {
+  background-color: $charcoal;
+  color: $linen;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  font-family: $raleway;
+}
+
+.foot-right {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.foot-right a {
+  justify-content: space-around;
+  padding: 10px;
+  text-align: center;
 }

@@ -17,6 +17,7 @@ class SessionForm extends React.Component {
     this.openModal = this.openModal.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.loadDemo = this.loadDemo.bind(this);
+    this.switchForms = this.switchForms.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -74,7 +75,22 @@ class SessionForm extends React.Component {
   }
 
   formHeader() {
-    return (this.state.logIn) ? <h3>Log In to HellaPixels</h3> : <h3>Join HellaPixels</h3>;
+    return (this.state.logIn) ? <h3>Log in to HellaPixels</h3> : <h3>Join HellaPixels</h3>;
+  }
+
+  formButton() {
+    return (this.state.logIn) ? <h3>Log in</h3> : <h3>Sign up</h3>;
+  }
+
+  switchForms() {
+    this.setState({
+      logIn: !this.state.logIn
+    });
+    this.props.clearErrors();
+  }
+
+  switchButton() {
+    return (this.state.logIn) ? <p>Don't have an account? Sign up</p> : <p>Already have an account? Log in</p>;
   }
 
   render() {
@@ -89,41 +105,49 @@ class SessionForm extends React.Component {
           onRequestClose={this.closeModal}
           style={style}>
 
-          <button onClick={this.closeModal}>X</button>
+
 
           <div className="login-form-container">
+            <button onClick={this.closeModal}>X</button>
             <form className="login-form-box">
               <br/>
               {this.formHeader()}
+              <br/>
               {this.renderErrors()}
 
               <div className="login-form">
                 <br/>
-                <label>Username:
-                  <input
-                    type="text"
-                    value={this.state.username}
-                    onChange={this.update('username')}
-                    className="login-input"
-                  />
-                </label>
+                <label htmlFor="un">Username</label>
+                <br/>
+                <input id="un"
+                  type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="login-input"
+                />
+
 
                 <br/>
 
-                <label>Password:
-                  <input
-                    type="password"
-                    value={this.state.password}
-                    onChange={this.update('password')}
-                    className="login-input"
-                  />
-                </label>
+                <label htmlFor="pw">Password</label>
+                <br/>
+                <input id="pw"
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                />
+
 
                 <br/>
 
-                <input onClick={this.handleSubmit} type="submit" value="Submit" />
+                <button onClick={this.handleSubmit}>{this.formButton()}</button>
+
                 <p>or</p>
-                <button onClick={this.loadDemo}>Guest Demo</button>
+
+                <button onClick={this.loadDemo}><h3>Guest Demo</h3></button>
+
+                <a href="/#" onClick={this.switchForms}>{this.switchButton()}</a>
               </div>
             </form>
           </div>

@@ -10,15 +10,16 @@ const style = {
   },
   content : {
     position        : 'fixed',
-    top             : '100px',
-    left            : '150px',
-    right           : '150px',
+    top             : '50px',
     bottom          : '100px',
+    margin          : 'auto',
+    width           : '300px',
+    height          : '500px',
     border          : '1px solid #ccc',
-    padding         : '20px',
+    padding         : '30px 50px',
     zIndex          : 11,
     // opacity         : '',
-    transition      : 'opacity 2s'
+    // transition      : 'opacity 2s'
   }
 };
 

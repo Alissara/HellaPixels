@@ -8,8 +8,7 @@
     }
   },
   errors: {
-    signUp: [],
-    logIn: [],
+    authForm: [],
     createPhoto: []
   },
   photos: {

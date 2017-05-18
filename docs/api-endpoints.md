@@ -30,6 +30,8 @@
 
 ### Follows
 
-- `GET /api/users/:id/follows`
-- `POST /api/users/:id/follows`
-- `DELETE /api/users/:id/follows/:followId`
+- `GET /api/followee`
+- `GET /api/follower`
+
+- `POST /api/follows`
+- `DELETE /api/follows/:followId`
