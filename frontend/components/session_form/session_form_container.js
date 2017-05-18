@@ -11,7 +11,7 @@ const mapStateToProps = ({ session, errors }) => {
   };
 };
 
-const mapDispatchToProps = (dispatch, { location }) => ({
+const mapDispatchToProps = (dispatch) => ({
   login: user => dispatch(login(user)),
   logout: () => dispatch(logout()),
   signup: user => dispatch(signup(user)),

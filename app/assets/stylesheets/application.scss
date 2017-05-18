@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+
+
+$lightest-gray: #efefef;
+$off-white: #FAFAFA;
+$gray: #999;
+$white: #fff;
+
+$sans-serif: sans-serif;
+$raleway: 'Raleway', sans-serif;
+
+@import "css_reset"; // 1
+@import url('https://fonts.googleapis.com/css?family=Raleway'); // 2
+@import "nav_bar"; // 3
+@import "splash"; // 4
+@import "auth_form"; // 5

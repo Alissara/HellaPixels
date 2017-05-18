@@ -2,11 +2,14 @@
 <html>
   <head>
     <title>HellaPixels</title>
-    <link rel="icon" href="/grid-big.ico" type="image/ico"/>
+    <link rel="icon" type="image/png" sizes="16x16" href=<%=asset_path('favicon.png')%>>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!-- <link rel="icon" href="/grid-big.ico" type="image/ico"/> -->
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
   </head>
 
   <body>

@@ -1,0 +1,23 @@
+.login-signup, .header-right {
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Raleway';
+}
+
+.login-signup > button {
+  display: flex;
+  justify-content: flex-end;
+  padding: 7px 7px;
+  border: 1px solid black;
+  margin: 3px 3px;
+  font-size: 14px;
+  width: 75px;
+  text-align: center;
+  vertical-align: center;
+
+}
+
+.login-signup > button:hover {
+  background-color: #202020;
+  color: #D3D3D3;
+}

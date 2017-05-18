@@ -12,6 +12,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
+import SplashContainer from  './splash/splash_container';
 
 const App = () => (
   <div>
@@ -21,7 +22,7 @@ const App = () => (
       <ProtectedRoute path="/home" component={GreetingContainer}/>
     </nav>
     <main>
-      <Route exact path="/" render={() => <h1>SPLASHPAGE</h1>} />
+      <Route exact path="/" component={SplashContainer} />
       <Route path="/home" render={() => <h1>HOMEPAGE</h1>} />
     </main>
   </div>
