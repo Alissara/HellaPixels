@@ -23,6 +23,11 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  has_many :photos,
+    class_name: :Photo,
+    primary_key: :id,
+    foreign_key: :user_id
+
   def self.find_by_credentials(un, pw)
     user = User.find_by(username: un)
     return nil unless user

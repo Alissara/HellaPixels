@@ -48,12 +48,14 @@
 }
 
 .footer {
+  margin-top: 10px;
   display: flex;
   justify-content: space-around;
   font-family: $raleway;
 }
 
-.foot-right {
+.foot-right,
+.foot-left {
   display: flex;
   flex-direction: column;
   margin: 10px;
