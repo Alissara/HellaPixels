@@ -13,6 +13,9 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
 import SplashContainer from  './splash/splash_container';
+import PhotoIndexContainer from './photos/photo_index_container';
+
+import HomePage from './home/home';
 
 const App = () => (
   <div>
@@ -29,8 +32,11 @@ const App = () => (
     </nav>
 
     <main className="main">
-      <Route exact path="/" component={SplashContainer} />
-      <Route path="/home" render={ () => <h1>HOMEPAGE</h1> } />
+      <Switch>
+        <Route exact path="/" component={SplashContainer} />
+        <Route path="/home" component={HomePage} />
+        <ProtectedRoute path="/users/:userId" component={PhotoIndexContainer} />
+      </Switch>
     </main>
 
     <Route exact path="/"
