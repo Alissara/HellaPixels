@@ -1,12 +1,12 @@
 class Api::PhotosController < ApplicationController
 
   def index
-    @photos = Photo.find_by_user_id(user: params[:id])
+    @photos = Photo.find_by_user_id(params[:user_id])
     render 'api/photos/index'
   end
 
   def show
-    @photo = Photo.find_by(photo: params[:id])
+    @photo = Photo.find(params[:id])
     render 'api/photos/show'
   end
 
@@ -22,7 +22,7 @@ class Api::PhotosController < ApplicationController
   end
 
   def update
-    @photo = Photo.find_by(photo: params[:id])
+    @photo = Photo.find(params[:id])
 
     if @photo.update(photo_params)
       render 'api/photos/show'
@@ -32,7 +32,7 @@ class Api::PhotosController < ApplicationController
   end
 
   def destroy
-    @photo = Photo.find_by(photo: params[:id])
+    @photo = Photo.find(params[:id])
     @photo.destroy
     render 'api/photos/show'
   end
@@ -40,7 +40,7 @@ class Api::PhotosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photo).permit(:url, :title, :description)
+    params.require(:photo).permit(:url, :title, :description, :user_id)
   end
 
 end

@@ -1,8 +1,8 @@
-export const fetchPhotos = data => (
+export const fetchPhotos = photo => (
   $.ajax({
     method: 'GET',
     url: 'api/photos',
-    data
+    data: photo
   })
 );
 
@@ -13,25 +13,25 @@ export const fetchPhoto = id => (
   })
 );
 
-export const createPhoto = data => (
+export const createPhoto = photo => (
   $.ajax({
     method: 'POST',
     url: 'api/photos',
-    data
+    data: { photo }
   })
 );
 
-export const updatePhoto = data => (
+export const updatePhoto = photo => (
   $.ajax({
     method: 'PATCH',
-    url: `api/photos/${data.id}`,
-    data
+    url: `api/photos/${photo.id}`,
+    data: { photo }
   })
 );
 
-export const deletePhoto = data => (
+export const deletePhoto = id => (
   $.ajax({
     method: 'DELETE',
-    url: `api/photos/${data.id}`
+    url: `api/photos/${id}`
   })
 );

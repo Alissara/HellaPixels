@@ -1,12 +1,12 @@
 ### Bugs
 
-**#1 Bug** 
-
+**#1 Bug**
+bind.this
 
 
 
 **#2 Bug**
-
+nesting components
 
 
 

@@ -20,24 +20,33 @@ export const removePhoto = photo => ({
   photo
 });
 
-export const fetchPhotos = data => dispatch => (
-  APIUtil.fetchPhotos(data).then(photos => dispatch(receivePhotos(photos)))
+export const fetchPhotos = userid => dispatch => (
+  APIUtil.fetchPhotos(userid)
+    .then(photos => dispatch(receivePhotos(photos)))
 );
 
 export const fetchPhoto = id => dispatch => (
-  APIUtil.fetchPhoto(id).then(photo => dispatch(receivePhoto(photo)))
+  APIUtil.fetchPhoto(id)
+    .then(photo => dispatch(receivePhoto(photo)))
 );
 
 export const createPhoto = photo => dispatch => (
   APIUtil.createPhoto(photo)
-    .then(photo => { dispatch(receivePhoto(photo)); dispatch(clearErrors());},
-    err => dispatch(receiveErrors(err.responseJSON)))
+    .then(
+      pht => {
+        dispatch(receivePhoto(pht));
+        dispatch(clearErrors());
+      },
+      err => dispatch(receiveErrors(err.responseJSON))
+    )
 );
 
 export const updatePhoto = photo => dispatch => (
-  APIUtil.updatePhoto(photo).then(photo => dispatch(receivePhoto(photo)))
+  APIUtil.updatePhoto(photo)
+    .then(pht => dispatch(receivePhoto(pht)))
 );
 
-export const deletePhoto = photo => dispatch => (
-  APIUtil.deletePhoto(photo).then(photo => dispatch(removePhoto(photo)))
+export const deletePhoto = id => dispatch => (
+  APIUtil.deletePhoto(id)
+    .then(photo => dispatch(removePhoto(photo)))
 );

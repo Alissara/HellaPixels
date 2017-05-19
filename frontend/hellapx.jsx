@@ -7,13 +7,27 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 //Test
-// import * as APIUtil from './util/session_api_util';
-// import { login, logout, signup } from './actions/session_actions';
 // window.store = configureStore();
-// window.APIUtil = APIUtil;
+// import { login, logout, signup } from './actions/session_actions';
 // window.login = login;
 // window.logout = logout;
 // window.signup = signup;
+
+// import { fetchPhotos,
+//          fetchPhoto,
+//          createPhoto,
+//          updatePhoto,
+//          deletePhoto } from './actions/photo_actions';
+//
+// window.fetchPhotos = fetchPhotos;
+// window.fetchPhoto = fetchPhoto;
+// window.createPhoto = createPhoto;
+// window.updatePhoto = updatePhoto;
+// window.deletePhoto = deletePhoto;
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -25,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
+  // Test - remove later
   window.store = store;
 
   const root = document.getElementById('root');
