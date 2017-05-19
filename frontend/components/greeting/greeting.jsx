@@ -9,7 +9,7 @@ class Greeting extends React.Component {
   render() {
     const {currentUser, logout} = this.props;
     return(
-      <nav className="header-right">
+      <nav className="home-nav-right">
         <Link to="#" className="header-name">Hi, {currentUser.username}!</Link>
         <Link to="#" className="header-button" onClick={logout}>Log Out</Link>
         <Link to="#" className="header-upload">Upload</Link>

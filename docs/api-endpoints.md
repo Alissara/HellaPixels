@@ -23,15 +23,15 @@
 ### Photos
 
 - `GET /api/photos`
-- `GET /api/photos/:id`
 - `POST /api/photos`
+- `GET /api/photos/:id`
 - `PATCH /api/photos/:id`
 - `DELETE /api/photos/:id`
 
 ### Follows
 
-- `GET /api/followee`
 - `GET /api/follower`
+- `GET /api/following`
 
 - `POST /api/follows`
 - `DELETE /api/follows/:followId`

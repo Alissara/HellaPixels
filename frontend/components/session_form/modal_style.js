@@ -5,7 +5,8 @@ const style = {
     left            : 0,
     right           : 0,
     bottom          : 0,
-    backgroundColor : 'rgba(255, 255, 255, 0.75)',
+    backgroundColor : 'rgba(0, 0, 0, 0.75)',
+    // backgroundColor : 'rgba(255, 255, 255, 0.75)',
     zIndex          : 10
   },
   content : {
@@ -18,6 +19,7 @@ const style = {
     border          : '1px solid #ccc',
     padding         : '30px 50px',
     zIndex          : 11,
+
     // opacity         : '',
     // transition      : 'opacity 2s'
   }

@@ -14,7 +14,7 @@
   photos: {
     1: {
       id: 1,
-      url: "/photo/url"
+      url: "/photo/url",
       title: "Photo title",
       description: "Photo description",
       user_id: 1,
