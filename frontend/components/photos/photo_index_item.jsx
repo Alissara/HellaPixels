@@ -156,4 +156,4 @@ class PhotoIndexItem extends React.Component {
   }
 
 }
-export default PhotoIndexItem;
+export default withRouter(PhotoIndexItem);

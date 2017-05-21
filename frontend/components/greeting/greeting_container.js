@@ -5,9 +5,12 @@ import { createPhoto } from '../../actions/photo_actions';
 import { clearErrors } from '../../actions/error_actions';
 import Greeting from './greeting';
 
-const mapStateToProps = ({ session, errors }) => ({
-  currentUser: session.currentUser,
-  errors: errors.createPhoto
+import { selectUserPhotos } from '../../reducers/selectors';
+
+const mapStateToProps = (state) => ({
+  currentUser: state.session.currentUser,
+  errors: state.errors.createPhoto,
+  photos: selectUserPhotos(state)
 });
 
 const mapDispatchToProps = dispatch => ({

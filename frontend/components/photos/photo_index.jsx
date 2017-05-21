@@ -7,6 +7,12 @@ class PhotoIndex extends React.Component {
     this.props.fetchPhotos({user_id: this.props.userId});
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.userId !== nextProps.match.params.userId) {
+      this.props.fetchPhotos({user_id: nextProps.match.params.userId});
+    }
+  }
+
   //spinner or loading icon thing??
 
   render() {

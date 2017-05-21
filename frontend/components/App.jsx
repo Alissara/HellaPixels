@@ -33,11 +33,9 @@ const App = () => (
     </nav>
 
     <main className="main">
-      <Switch>
         <Route exact path="/" component={SplashContainer} />
         <Route path="/home" component={HomePage} />
-        <ProtectedRoute path="/users/:userId" component={PhotoIndexContainer} />
-      </Switch>
+        <Route path="/users/:userId" component={PhotoIndexContainer} />
     </main>
 
     <Route exact path="/"

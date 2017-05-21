@@ -20,7 +20,7 @@ class Greeting extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.errors.length === 0) {
+    if (nextProps.photos.length !== this.props.photos.length) {
       this.closeModal();
     }
   }
@@ -133,4 +133,4 @@ class Greeting extends React.Component {
 
 }
 
-export default Greeting;
+export default withRouter(Greeting);
