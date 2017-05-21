@@ -123,10 +123,7 @@ class SessionForm extends React.Component {
                   onChange={this.update('username')}
                   className="login-input"
                 />
-
-
                 <br/>
-
                 <label htmlFor="pw">Password</label>
                 <br/>
                 <input id="pw"
@@ -135,22 +132,14 @@ class SessionForm extends React.Component {
                   onChange={this.update('password')}
                   className="login-input"
                 />
-
-
                 <br/>
-
                 <button onClick={this.handleSubmit}>{this.formButton()}</button>
-
                 <p>or</p>
-
                 <button onClick={this.loadDemo}><h3>Guest Demo</h3></button>
-
                 <a href="/#" onClick={this.switchForms}>{this.switchButton()}</a>
               </div>
             </form>
           </div>
-
-
         </Modal>
       </nav>
     );

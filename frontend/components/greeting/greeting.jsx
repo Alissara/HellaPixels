@@ -19,6 +19,12 @@ class Greeting extends React.Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors.length === 0) {
+      this.closeModal();
+    }
+  }
+
   upload(e) {
     e.preventDefault();
     cloudinary.openUploadWidget(
@@ -34,13 +40,7 @@ class Greeting extends React.Component {
 
   uploadPhoto(e) {
     e.preventDefault();
-    this.closeModal();
     this.props.createPhoto(this.state);
-    this.state = {
-      url: '',
-      title: '',
-      description: ''
-    };
   }
 
   openModal() {
@@ -50,6 +50,10 @@ class Greeting extends React.Component {
   closeModal() {
     this.setState({ modalOpen: false });
     this.props.clearErrors();
+    this.setState({
+      title: '',
+      description: ''
+    });
   }
 
   update(field) {
@@ -94,30 +98,32 @@ class Greeting extends React.Component {
             <figure className="photo-box">
               <img src={this.state.url}/>
             </figure>
-            <aside className="photo-form-box">
+
+            <form className="pphoto-form-box">
                 <br/>
               <h1>Create Photo</h1>
                 <br/>
               {this.renderErrors()}
-              <form className="photo-details">
-                <label htmlFor="title">Title</label>
-                <input id="title"
-                  type="text"
-                  value={this.state.title}
-                  onChange={this.update('title')}
-                />
-                <label htmlFor="desc">Description</label>
-                <input id="desc"
-                  type="text"
-                  value={this.state.description}
-                  onChange={this.update('description')}
-                />
-              </form>
+                <br/>
+              <label htmlFor="title">Title</label>
+              <input id="title"
+                type="text"
+                value={this.state.title}
+                onChange={this.update('title')}
+              />
+              <label htmlFor="desc">Description</label>
+              <input id="desc"
+                type="text"
+                value={this.state.description}
+                onChange={this.update('description')}
+              />
               <div className="create-button">
                 <button onClick={this.closeModal}>Cancel</button>
+                <br/>
                 <button onClick={this.uploadPhoto}>Save</button>
               </div>
-            </aside>
+            </form>
+
           </section>
         </Modal>
 
