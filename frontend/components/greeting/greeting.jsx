@@ -11,8 +11,8 @@ class Greeting extends React.Component {
     return(
       <nav className="home-nav-right">
         <Link to={`/users/${currentUser.id}`} className="header-name">{currentUser.username}</Link>
-        <Link to="#" className="header-button" onClick={logout}>Log Out</Link>
-        <Link to="#" className="header-upload">Upload</Link>
+        <Link to="/#" className="header-button" onClick={logout}>Log Out</Link>
+        <Link to="/#" className="header-upload">Upload</Link>
       </nav>
     );
   }
