@@ -20,6 +20,7 @@ class User < ApplicationRecord
   validates :session_token, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
   after_initialize :ensure_session_token
+  after_initialize :set_default
 
   attr_reader :password
 
@@ -57,6 +58,10 @@ class User < ApplicationRecord
 
   def ensure_session_token
     self.session_token ||= generate_session_token
+  end
+
+  def set_default
+    self.profile_url ||= 'https://robohash.org/my-own-slug.jpg?size=50x50'
   end
 
 end

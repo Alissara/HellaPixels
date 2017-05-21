@@ -5,12 +5,10 @@ import { clearErrors } from '../../actions/error_actions';
 import SessionForm from './session_form';
 
 
-const mapStateToProps = ({ session, errors }) => {
-  return {
-    loggedIn: Boolean(session.currentUser),
-    errors: errors.authForm
-  };
-};
+const mapStateToProps = ({ session, errors }) => ({
+  loggedIn: Boolean(session.currentUser),
+  errors: errors.authForm
+});
 
 const mapDispatchToProps = (dispatch) => ({
   login: user => dispatch(login(user)),

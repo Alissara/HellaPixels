@@ -29,6 +29,7 @@ const App = () => (
       </Link>
       <AuthRoute path="/" component={SessionFormContainer}/>
       <ProtectedRoute path="/home" component={GreetingContainer}/>
+      <ProtectedRoute path="/users" component={GreetingContainer}/>
     </nav>
 
     <main className="main">

@@ -87,7 +87,7 @@ class PhotoIndexItem extends React.Component {
       <section>
         <li className="photo-index-item">
           <a onClick={this.openShowModal}>
-            <img src="http://images.clipartpanda.com/penguin-clip-art-aiq5zAqiM.png" alt={photo.title} />
+            <img src={photo.url} alt={photo.title} />
           </a>
         </li>
 
@@ -100,7 +100,7 @@ class PhotoIndexItem extends React.Component {
           <section className="photo-show-container">
             <button onClick={this.closeShowModal}>X</button>
             <figure className="photo-box">
-              <img src="http://images.clipartpanda.com/penguin-clip-art-aiq5zAqiM.png" />
+              <img src={photo.url} />
             </figure>
             <aside className="photo-info">
               <header className="photo-user-info">
@@ -123,29 +123,29 @@ class PhotoIndexItem extends React.Component {
           style={style}>
 
           <section className="photo-edit-container">
-            <button onClick={this.closeEditModal}>X</button>
+            <button onClick={this.closeEditModal}><i className="fa fa-times" aria-hidden="true"></i></button>
             <figure className="photo-box">
-              <img src="http://images.clipartpanda.com/penguin-clip-art-aiq5zAqiM.png" />
+              <img src={photo.url} />
             </figure>
-            <aside className="photo-info">
-              <header className="photo-user-info">
-                <img src="https://robohash.org/my-own-slug.jpg?size=50x50" />
-                <h1>Username: </h1>
-              </header>
-              <figcaption className="photo-details">
-                <label htmlFor="title">Title:</label>
+            <aside className="photo-form-box">
+                <br/>
+              <h1>Edit Photo</h1>
+
+
+              <form className="photo-details">
+                <label htmlFor="title">Title</label>
                 <input id="title"
                   type="text"
                   value={this.state.photo.title}
                   onChange={this.update('title')}
                 />
-                <label htmlFor="desc">Description:</label>
+                <label htmlFor="desc">Description</label>
                 <input id="desc"
                   type="text"
                   value={this.state.photo.description}
                   onChange={this.update('description')}
                 />
-              </figcaption>
+              </form>
               {this.updateButton()}
             </aside>
           </section>
