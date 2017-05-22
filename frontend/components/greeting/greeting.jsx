@@ -78,9 +78,9 @@ class Greeting extends React.Component {
     const {currentUser, logout} = this.props;
     return(
       <nav className="home-nav-right">
-
         <Link to={`/users/${currentUser.id}`} className="header-name">
-          {currentUser.username}
+          <img src={currentUser.profile_url}/>
+          <p>{currentUser.username}</p>
         </Link>
         <Link to="/" className="header-button" onClick={logout}>Log Out</Link>
         <button className="header-upload" onClick={this.upload}>

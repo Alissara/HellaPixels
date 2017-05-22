@@ -25,7 +25,10 @@ class PhotoIndex extends React.Component {
     return (
       <section className="userspage-container">
         <div className="usersdetail-container">
-          <UserPage user={user} updateUser={updateUser} />
+          <UserPage
+            user={user}
+            isCurrentUser={isCurrentUser}
+            updateUser={updateUser} />
         </div>
 
         <div className="masonry-container">
@@ -37,8 +40,7 @@ class PhotoIndex extends React.Component {
                   photo={photo}
                   isCurrentUser={isCurrentUser}
                   updatePhoto={updatePhoto}
-                  deletePhoto={deletePhoto}
-                />
+                  deletePhoto={deletePhoto} />
               );
             })}
 					</Masonry>

@@ -51,6 +51,29 @@
   color: $charcoal;
 }
 
+.home-nav-right > .header-name {
+  display: flex;
+  justify-content: center;
+  padding: 3px 3px;
+  border: 1px solid $charcoal;
+  margin: 3px 3px;
+  font-size: 14px;
+  width: 100px;
+  text-align: center;
+  vertical-align: center;
+  color: $charcoal;
+}
+
+.home-nav-right > .header-name > img {
+  width: 25px;
+  height: 25px;
+  padding-right: 5px;
+}
+
+.home-nav-right > .header-name > p {
+  padding-top: 4px;
+}
+
 .header-upload {
   display: flex;
   justify-content: center;
