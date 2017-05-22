@@ -11,15 +11,15 @@ class HomePage extends React.Component {
         <br/>
         <Link to="/users/2">user2</Link>
         <br/>
-        <Link to="/users/3">user3</Link>
-        <br/>
-        <Link to="/users/4">user4</Link>
-        <br/>
-        <Link to="/users/5">user5</Link>
-        <br/>
-        <Link to="/users/6">user6</Link>
-        <br/>
-        <Link to="/users/7">user7</Link>
+        // <Link to="/users/3">user3</Link>
+        // <br/>
+        // <Link to="/users/4">user4</Link>
+        // <br/>
+        // <Link to="/users/5">user5</Link>
+        // <br/>
+        // <Link to="/users/6">user6</Link>
+        // <br/>
+        // <Link to="/users/7">user7</Link>
 
       </div>
     );
