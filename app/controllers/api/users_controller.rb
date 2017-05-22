@@ -1,5 +1,10 @@
 class Api::UsersController < ApplicationController
 
+  def show
+    @user = User.find(params[:id])
+    render 'api/users/show'
+  end
+
   def create
     @user = User.new(user_params)
 
@@ -11,9 +16,17 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    render 'api/users/show'
+  end
+
   private
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params
+      .require(:user)
+      .permit(:username, :password, :bio, :cover_url, :profile_url)
   end
 end

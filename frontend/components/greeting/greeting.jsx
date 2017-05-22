@@ -94,36 +94,41 @@ class Greeting extends React.Component {
           style={style}>
 
           <section className="photo-create-container">
-            <button onClick={this.closeModal}><i className="fa fa-times" aria-hidden="true"></i></button>
-            <figure className="photo-box">
-              <img src={this.state.url}/>
-            </figure>
+            <button onClick={this.closeModal}>
+              <i className="fa fa-times" aria-hidden="true"></i>
+            </button>
+            <section className="photo-create">
+              <figure className="photo-box">
+                <img src={this.state.url}/>
+              </figure>
+              <aside className="photo-info">
+                <form className="photo-form-box">
+                    <br/>
+                  <h1>Create Photo</h1>
+                    <br/>
+                  {this.renderErrors()}
+                    <br/>
+                  <label htmlFor="title">Title</label>
+                  <input id="title"
+                    type="text"
+                    value={this.state.title}
+                    onChange={this.update('title')}
+                  />
+                  <br/>
+                  <label htmlFor="desc">Description</label>
+                  <textarea id="desc"
+                    value={this.state.description}
+                    onChange={this.update('description')}
+                  />
 
-            <form className="pphoto-form-box">
-                <br/>
-              <h1>Create Photo</h1>
-                <br/>
-              {this.renderErrors()}
-                <br/>
-              <label htmlFor="title">Title</label>
-              <input id="title"
-                type="text"
-                value={this.state.title}
-                onChange={this.update('title')}
-              />
-              <label htmlFor="desc">Description</label>
-              <input id="desc"
-                type="text"
-                value={this.state.description}
-                onChange={this.update('description')}
-              />
-              <div className="create-button">
-                <button onClick={this.closeModal}>Cancel</button>
-                <br/>
-                <button onClick={this.uploadPhoto}>Save</button>
-              </div>
-            </form>
-
+                </form>
+                  <div className="create-button">
+                    <button onClick={this.closeModal}>Cancel</button>
+                    <br/>
+                    <button onClick={this.uploadPhoto}>Save</button>
+                  </div>
+              </aside>
+            </section>
           </section>
         </Modal>
 

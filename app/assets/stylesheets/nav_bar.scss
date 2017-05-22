@@ -51,8 +51,22 @@
   color: $charcoal;
 }
 
+.header-upload {
+  display: flex;
+  justify-content: center;
+  padding: 1px 1px;
+  border: 1px solid $charcoal;
+  margin: 3px 3px;
+  font-size: 24px;
+  width: 40px;
+  text-align: center;
+  vertical-align: center;
+  color: $charcoal;
+}
+
 .login-signup > button:hover,
-.home-nav-right > a:hover {
+.home-nav-right > a:hover,
+.header-upload:hover {
   background-color: $charcoal;
   color: $linen;
   cursor: pointer;

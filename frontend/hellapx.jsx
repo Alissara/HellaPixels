@@ -18,16 +18,15 @@ import Root from './components/root';
 //          createPhoto,
 //          updatePhoto,
 //          deletePhoto } from './actions/photo_actions';
-//
 // window.fetchPhotos = fetchPhotos;
 // window.fetchPhoto = fetchPhoto;
 // window.createPhoto = createPhoto;
 // window.updatePhoto = updatePhoto;
 // window.deletePhoto = deletePhoto;
 
-
-
-
+import { fetchUser, updateUser } from './actions/user_actions';
+window.fetchUser = fetchUser;
+window.updateUser = updateUser;
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;

@@ -6,19 +6,20 @@ const style = {
     right           : 0,
     bottom          : 0,
     backgroundColor : 'rgba(0, 0, 0, 0.75)',
-    // backgroundColor : 'rgba(255, 255, 255, 0.75)',
     zIndex          : 10
   },
   content : {
     position        : 'fixed',
-    top             : '50px',
+    top             : '100px',
+    left            : '150px',
+    right           : '150px',
     bottom          : '100px',
     margin          : 'auto',
-    width           : '300px',
-    height          : '500px',
+    // width           : '700px',
+    // height          : '700px',
     border          : '1px solid #ccc',
     padding         : '30px 50px',
-    zIndex          : 11,
+    zIndex          : 11
 
     // opacity         : '',
     // transition      : 'opacity 2s'

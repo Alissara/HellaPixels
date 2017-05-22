@@ -83,13 +83,11 @@ class PhotoIndexItem extends React.Component {
   render() {
     const { photo } = this.props;
 
-    return(
-      <section>
-        <li className="photo-index-item">
-          <a onClick={this.openShowModal}>
+    return (
+      <div className="tile">
+        <a onClick={this.openShowModal}>
             <img src={photo.url} alt={photo.title} />
-          </a>
-        </li>
+        </a>
 
         <Modal
           contentLabel="Modal"
@@ -98,21 +96,26 @@ class PhotoIndexItem extends React.Component {
           style={style}>
 
           <section className="photo-show-container">
-            <button onClick={this.closeShowModal}>X</button>
-            <figure className="photo-box">
-              <img src={photo.url} />
-            </figure>
-            <aside className="photo-info">
-              <header className="photo-user-info">
-                <img src="https://robohash.org/my-own-slug.jpg?size=50x50"/>
-                <h1>Username: </h1>
-              </header>
-              <figcaption className="photo-details">
-                <h2>Title: {photo.title}</h2>
-                <p>Description: {photo.description}</p>
-              </figcaption>
-              {this.editButton()}
-            </aside>
+            <button onClick={this.closeShowModal}>
+              <i className="fa fa-times" aria-hidden="true"></i>
+            </button>
+            <section className="photo-show">
+              <figure className="photo-box">
+                <img src={photo.url} />
+              </figure>
+              <aside className="photo-info">
+                <header className="photo-user-info">
+                  <img src="https://robohash.org/my-own-slug.jpg?size=50x50"/>
+                  <h1>Username: </h1>
+                </header>
+                <figcaption className="photo-details">
+                  <h2>Title: {photo.title}</h2>
+                  <br/>
+                  <p>Description: {photo.description}</p>
+                </figcaption>
+                {this.editButton()}
+              </aside>
+            </section>
           </section>
         </Modal>
 
@@ -123,35 +126,40 @@ class PhotoIndexItem extends React.Component {
           style={style}>
 
           <section className="photo-edit-container">
-            <button onClick={this.closeEditModal}><i className="fa fa-times" aria-hidden="true"></i></button>
-            <figure className="photo-box">
-              <img src={photo.url} />
-            </figure>
-            <aside className="photo-form-box">
-                <br/>
-              <h1>Edit Photo</h1>
+            <button onClick={this.closeEditModal}>
+              <i className="fa fa-times" aria-hidden="true"></i>
+            </button>
+            <section className="photo-show">
+              <figure className="photo-box">
+                <img src={photo.url} />
+              </figure>
+              <aside className="photo-info">
+                <form className="photo-form-box">
+                  <h1>Edit Photo</h1>
+                  <br/>
 
 
-              <form className="photo-details">
-                <label htmlFor="title">Title</label>
-                <input id="title"
-                  type="text"
-                  value={this.state.photo.title}
-                  onChange={this.update('title')}
-                />
-                <label htmlFor="desc">Description</label>
-                <input id="desc"
-                  type="text"
-                  value={this.state.photo.description}
-                  onChange={this.update('description')}
-                />
-              </form>
-              {this.updateButton()}
-            </aside>
+
+                  <label htmlFor="title">Title</label>
+                  <input id="title"
+                    type="text"
+                    value={this.state.photo.title}
+                    onChange={this.update('title')}
+                  />
+                  <br/>
+                  <label htmlFor="desc">Description</label>
+                  <textarea id="desc"
+                    value={this.state.photo.description}
+                    onChange={this.update('description')}
+                  />
+                </form>
+                  {this.updateButton()}
+              </aside>
+            </section>
           </section>
         </Modal>
 
-      </section>
+      </div>
     );
   }
 

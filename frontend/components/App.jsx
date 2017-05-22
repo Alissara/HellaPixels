@@ -23,7 +23,7 @@ const App = () => (
     <nav className="navbar">
       <Link to="/home" className="header-link">
         <nav className="logo">
-          <img src="gridbig.png" />
+          <img src="gridbig2.png" />
           <h2>HellaPixels</h2>
         </nav>
       </Link>
