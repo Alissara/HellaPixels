@@ -8,8 +8,12 @@ class UserPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      id: this.props.user.id,
+      bio: this.props.user.bio,
+      profile_url: this.props.user.profile_url,
+      cover_url: this.props.user.cover_url,
+
       modalOpen: false,
-      user: this.props.user
     };
 
     this.openModal = this.openModal.bind(this);
@@ -31,14 +35,12 @@ class UserPage extends React.Component {
   editUser(e) {
     e.preventDefault();
     this.closeModal();
-    this.props.updateUser(this.state.user);
+    this.props.updateUser(this.state);
   }
 
   update(field) {
     return e => {
-      let newUserInfo = merge({}, this.state.user);
-      newUserInfo[field] = e.currentTarget.value;
-      this.setState({ user: newUserInfo });
+      this.setState({[field]: e.currentTarget.value});
     };
   }
 
@@ -64,9 +66,7 @@ class UserPage extends React.Component {
       window.cloudinary_options,
       function(error, images) {
         if (error === null) {
-          let newUserInfo = merge({}, this.state.user);
-          newUserInfo['profile_url'] = images[0].url;
-          this.setState({ user: newUserInfo });
+          this.setState({ profile_url: images[0].url });
         }
       }.bind(this)
     );
@@ -78,9 +78,7 @@ class UserPage extends React.Component {
       window.cloudinary_options,
       function(error, images) {
         if (error === null) {
-          let newUserInfo = merge({}, this.state.photo);
-          newUserInfo['cover_url'] = images[0].url;
-          this.setState({ user: newUserInfo });
+          this.setState({ cover_url: images[0].url });
         }
       }.bind(this)
     );
@@ -120,7 +118,7 @@ class UserPage extends React.Component {
                 <br/>
               <label htmlFor="bio">Bio</label>
               <textarea id="bio"
-                value={this.state.user.bio}
+                value={this.state.bio}
                 onChange={this.update('bio')} />
                 <br/>
               <button onClick={this.uploadProfile}>
