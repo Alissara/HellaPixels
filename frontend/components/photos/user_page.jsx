@@ -45,7 +45,7 @@ class UserPage extends React.Component {
   editButton() {
     if (this.props.isCurrentUser) {
       return (
-        <div className="edit-button">
+        <div className="edit-user-button">
           <button onClick={this.openModal}>Edit</button>
         </div>
       );

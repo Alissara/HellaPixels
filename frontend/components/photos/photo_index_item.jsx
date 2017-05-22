@@ -84,7 +84,7 @@ class PhotoIndexItem extends React.Component {
     const { photo } = this.props;
 
     return (
-      <div className="tile">
+      <div className="item">
         <a onClick={this.openShowModal}>
             <img src={photo.url} alt={photo.title} />
         </a>

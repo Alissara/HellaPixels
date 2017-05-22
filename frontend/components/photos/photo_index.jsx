@@ -31,8 +31,9 @@ class PhotoIndex extends React.Component {
             updateUser={updateUser} />
         </div>
 
-        <div className="masonry-container">
-          <Masonry brakePoints={[350, 500, 750]}>
+
+        <div id="container">
+          <div className="grid-sizer"></div>
             {photos.map((photo) => {
               return (
                 <PhotoIndexItem
@@ -43,8 +44,10 @@ class PhotoIndex extends React.Component {
                   deletePhoto={deletePhoto} />
               );
             })}
-					</Masonry>
+
         </div>
+
+
       </section>
     );
   }
@@ -53,3 +56,18 @@ class PhotoIndex extends React.Component {
 
 
 export default withRouter(PhotoIndex);
+
+// <div className="masonry-container">
+//   <Masonry brakePoints={[350, 500, 750]}>
+//     {photos.map((photo) => {
+//       return (
+//         <PhotoIndexItem
+//           key={photo.id}
+//           photo={photo}
+//           isCurrentUser={isCurrentUser}
+//           updatePhoto={updatePhoto}
+//           deletePhoto={deletePhoto} />
+//       );
+//     })}
+//   </Masonry>
+// </div>

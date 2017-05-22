@@ -1,0 +1,62 @@
+.user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: $linen;
+}
+
+.user-cover-img {
+  margin-top: 0px;
+  width: 100%;
+}
+
+.user-cover-img img {
+  width: 100%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-info img,
+.user-info h1,
+.user-info p,
+.user-info .follow-buttons,
+.user-info .edit-user-button {
+  padding: 5px;
+}
+
+.user-info h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.user-info p {
+  font-size: 14px;
+}
+
+.user-info p {
+  padding-bottom: 30px;
+}
+
+
+
+
+
+.follow-buttons button,
+.edit-user-button button {
+  text-align: center;
+  margin: 5px 10px;
+  border: 1px solid $charcoal;
+  padding: 5px 10px;
+}
+
+.follow-buttons > button:hover,
+.edit-user-button > button:hover {
+  color: $linen;
+  background-color: $charcoal;
+  cursor: pointer;
+}
