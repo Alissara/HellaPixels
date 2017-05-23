@@ -23,7 +23,7 @@ user_id     | integer   | not null, foreign key (references users), indexed
 
 ## Follows
 column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-follower_id | integer   | not null, foreign key (references users), indexed
-followee_id | integer   | not null, foreign key (references users), indexed
+-------------|-----------|-----------------------
+id           | integer   | not null, primary key
+follower_id  | integer   | not null, foreign key (references users), indexed
+following_id | integer   | not null, foreign key (references users), indexed

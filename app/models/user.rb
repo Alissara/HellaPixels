@@ -29,6 +29,24 @@ class User < ApplicationRecord
     primary_key: :id,
     foreign_key: :user_id
 
+  has_many :in_follows,
+    class_name: :Follow,
+    primary_key: :id,
+    foreign_key: :following_id
+
+  has_many :out_follows,
+    class_name: :Follow,
+    primary_key: :id,
+    foreign_key: :follower_id
+
+  has_many :followers,
+    through: :in_follows,
+    source: :follower
+
+  has_many :followings,
+    through: :out_follows,
+    source: :following
+
   def self.find_by_credentials(un, pw)
     user = User.find_by(username: un)
     return nil unless user

@@ -28,6 +28,10 @@ import { fetchUser, updateUser } from './actions/user_actions';
 window.fetchUser = fetchUser;
 window.updateUser = updateUser;
 
+import { createFollow, deleteFollow } from './actions/user_actions';
+window.createFollow = createFollow;
+window.deleteFollow = deleteFollow;
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {

@@ -1,7 +1,12 @@
 import merge from 'lodash/merge';
 import { RECEIVE_USER } from '../actions/user_actions';
 
-const UserReducer = (state = {}, action) => {
+const defaultUser = {
+  followers: [],
+  followings: []
+};
+
+const UserReducer = (state = defaultUser, action) => {
   Object.freeze(state);
 
   switch(action.type) {

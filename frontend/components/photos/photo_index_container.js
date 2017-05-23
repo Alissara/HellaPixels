@@ -5,7 +5,9 @@ import { fetchPhotos,
          updatePhoto,
          deletePhoto } from '../../actions/photo_actions';
 import { fetchUser,
-         updateUser } from '../../actions/user_actions';
+         updateUser,
+         createFollow,
+         deleteFollow } from '../../actions/user_actions';
 
 const mapStateToProps = (state, myProps) => {
   const userId = parseInt(myProps.match.params.userId);
@@ -13,8 +15,11 @@ const mapStateToProps = (state, myProps) => {
   return {
     photos: selectUserPhotos(state),
     userId: userId,
+    currentUserId: currentUserId,
     isCurrentUser: Boolean(userId === currentUserId),
-    user: state.user
+    user: state.user,
+    followers: state.user.followers,
+    followings: state.user.followings
   };
 };
 
@@ -23,7 +28,9 @@ const mapDispatchToProps = dispatch => ({
   updatePhoto: (photo) => dispatch(updatePhoto(photo)),
   deletePhoto: (id) => dispatch(deletePhoto(id)),
   fetchUser: (id) => dispatch(fetchUser(id)),
-  updateUser: (user) => dispatch(updateUser(user))
+  updateUser: (user) => dispatch(updateUser(user)),
+  createFollow: (follow) => dispatch(createFollow(follow)),
+  deleteFollow: (follow) => dispatch(deleteFollow(follow))
 });
 
 export default connect(

@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import { Link, withRouter } from 'react-router-dom';
 import style from './modal_style';
+import styleFollow from './modal_follow_style';
 import merge from 'lodash/merge';
 
 class UserPage extends React.Component {
@@ -12,8 +13,12 @@ class UserPage extends React.Component {
       bio: this.props.user.bio,
       profile_url: this.props.user.profile_url,
       cover_url: this.props.user.cover_url,
+      followers: this.props.followers,
+      followings: this.props.followings,
 
       modalOpen: false,
+      modalFollowingOpen: false,
+      modalFollowersOpen: false,
     };
 
     this.openModal = this.openModal.bind(this);
@@ -22,6 +27,16 @@ class UserPage extends React.Component {
     this.editUser = this.editUser.bind(this);
     this.uploadProfile = this.uploadProfile.bind(this);
     this.uploadCover = this.uploadCover.bind(this);
+    this.followUser = this.followUser.bind(this);
+    this.unfollowUser = this.unfollowUser.bind(this);
+
+    this.openFollowingModal = this.openFollowingModal.bind(this);
+    this.closeFollowingModal = this.closeFollowingModal.bind(this);
+    this.openFollowersModal = this.openFollowersModal.bind(this);
+    this.closeFollowersModal = this.closeFollowersModal.bind(this);
+    this.switchToFollowersModal = this.switchToFollowersModal.bind(this);
+    this.switchToFollowingModal = this.switchToFollowingModal.bind(this);
+
   }
 
   openModal() {
@@ -30,6 +45,32 @@ class UserPage extends React.Component {
 
   closeModal() {
     this.setState({ modalOpen: false });
+  }
+
+  openFollowingModal() {
+    this.setState({ modalFollowingOpen: true });
+  }
+
+  closeFollowingModal() {
+    this.setState({ modalFollowingOpen: false });
+  }
+
+  openFollowersModal() {
+    this.setState({ modalFollowersOpen: true });
+  }
+
+  closeFollowersModal() {
+    this.setState({ modalFollowersOpen: false });
+  }
+
+  switchToFollowersModal() {
+    this.setState({ modalFollowingOpen: false });
+    this.setState({ modalFollowersOpen: true });
+  }
+
+  switchToFollowingModal() {
+    this.setState({ modalFollowersOpen: false });
+    this.setState({ modalFollowingOpen: true });
   }
 
   editUser(e) {
@@ -54,11 +95,34 @@ class UserPage extends React.Component {
     } else {
       return (
         <div className="follow-button">
-          <button>Follow / Unfollow</button>
+          {this.followButton()}
         </div>
       );
     }
   }
+
+  followButton() {
+    const followersArr = this.props.followers.map((follower) => {
+      return follower.id;
+    });
+
+    if (followersArr.includes(this.props.currentUserId)) {
+      return <button onClick={this.unfollowUser}>Unfollow</button>;
+    } else {
+      return <button onClick={this.followUser}>Follow</button>;
+    }
+  }
+
+  followUser(e) {
+    e.preventDefault();
+    this.props.createFollow({user_id: this.props.user.id});
+  }
+
+  unfollowUser(e) {
+    e.preventDefault();
+    this.props.deleteFollow({user_id: this.props.user.id});
+  }
+
 
   uploadProfile(e) {
     e.preventDefault();
@@ -85,7 +149,7 @@ class UserPage extends React.Component {
   }
 
   render() {
-    const { user } = this.props;
+    const { user, followers, followings } = this.props;
 
     return (
       <section className="user-container">
@@ -97,8 +161,12 @@ class UserPage extends React.Component {
           <h1>{user.username}</h1>
           <p>{user.bio}</p>
           <div className="follow-buttons">
-            <button># Followers</button>
-            <button># Following</button>
+            <button onClick={this.openFollowersModal}>
+              {followers.length} Followers
+            </button>
+            <button onClick={this.openFollowingModal}>
+              {followings.length} Following
+            </button>
           </div>
           {this.editButton()}
         </figcaption>
@@ -140,6 +208,69 @@ class UserPage extends React.Component {
               </div>
           </section>
         </Modal>
+
+
+        <Modal
+          contentLabel="Modal"
+          isOpen={this.state.modalFollowingOpen}
+          onRequestClose={this.closeFollowingModal}
+          style={styleFollow}>
+
+          <div className="followers-container">
+            <button onClick={this.closeFollowingModal}>
+              <i className="fa fa-times" aria-hidden="true"></i>
+            </button>
+            <h1>Following</h1>
+            <br/>
+            <ul>
+              {followings.map((following) => {
+                return (
+                  <li key={following.id}>
+                    <Link to={`/users/${following.id}`} onClick={this.closeFollowingModal}>
+                      {following.username}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+            <br/>
+            <button onClick={this.switchToFollowersModal}>
+              Followers of {user.username}
+            </button>
+          </div>
+        </Modal>
+
+        <Modal
+          contentLabel="Modal"
+          isOpen={this.state.modalFollowersOpen}
+          onRequestClose={this.closeFollowersModal}
+          style={styleFollow}>
+
+          <div className="followers-container">
+            <button onClick={this.closeFollowersModal}>
+              <i className="fa fa-times" aria-hidden="true"></i>
+            </button>
+            <h1>Followers</h1>
+            <br/>
+            <ul>
+              {followers.map((follower) => {
+                return (
+                  <li key={follower.id}>
+                    <Link to={`/users/${follower.id}`} onClick={this.closeFollowersModal}>
+                      {follower.username}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+            <br/>
+            <button onClick={this.switchToFollowingModal}>
+              {user.username} is Following
+            </button>
+          </div>
+        </Modal>
+
+
 
       </section>
     );

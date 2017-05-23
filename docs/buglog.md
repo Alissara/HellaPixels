@@ -29,3 +29,8 @@ of this.setState.
 Cloudinary upload function was not calling the callback method.
 
 Needed to bind.this
+
+**#6 Bug**
+Arrays are showing up as undefined in the components
+
+Needed to set default state empty arrays in the reducers
