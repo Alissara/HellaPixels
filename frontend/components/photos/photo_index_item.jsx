@@ -81,7 +81,7 @@ class PhotoIndexItem extends React.Component {
   }
 
   render() {
-    const { photo } = this.props;
+    const { photo, user } = this.props;
 
     return (
       <div className="item">
@@ -105,13 +105,13 @@ class PhotoIndexItem extends React.Component {
               </figure>
               <aside className="photo-info">
                 <header className="photo-user-info">
-                  <img src="https://robohash.org/my-own-slug.jpg?size=50x50"/>
-                  <h1>Username: </h1>
+                  <img src={user.profile_url}/>
+                  <h1>{user.username}</h1>
                 </header>
                 <figcaption className="photo-details">
-                  <h2>Title: {photo.title}</h2>
+                  <h2>{photo.title}</h2>
                   <br/>
-                  <p>Description: {photo.description}</p>
+                  <p>{photo.description}</p>
                 </figcaption>
                 {this.editButton()}
               </aside>

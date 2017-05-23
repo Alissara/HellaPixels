@@ -6,7 +6,8 @@ class HomePage extends React.Component {
   render() {
     return (
       <div>
-        <p>HOMEPAGE</p>
+        <div className="homepage">
+        <p> HOMEPAGE </p>
         <Link to="/users/1">user1</Link>
         <br/>
         <Link to="/users/2">user2</Link>
@@ -20,7 +21,7 @@ class HomePage extends React.Component {
         <Link to="/users/6">user6</Link>
         <br/>
         <Link to="/users/7">user7</Link>
-
+        </div>
       </div>
     );
   }

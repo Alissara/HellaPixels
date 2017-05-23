@@ -10,15 +10,15 @@ const style = {
   },
   content : {
     position        : 'fixed',
-    top             : '100px',
-    left            : '150px',
-    right           : '150px',
-    bottom          : '100px',
+    top             : '20px',
+    left            : '20px',
+    right           : '20px',
+    bottom          : '20px',
     margin          : 'auto',
     // width           : '700px',
     // height          : '700px',
     border          : '1px solid #ccc',
-    padding         : '30px 50px',
+    padding         : '15px 30px',
     zIndex          : 11
 
     // opacity         : '',

@@ -3,11 +3,11 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: $linen;
+  background-color: #F9F9F9;
 }
 
 .user-cover-img {
-  margin-top: 0px;
+  margin-top: 50px;
   width: 100%;
 }
 
@@ -30,6 +30,11 @@
   padding: 5px;
 }
 
+.user-info img {
+  height: 100px;
+  width: 100px;
+}
+
 .user-info h1 {
   font-size: 25px;
   font-weight: bold;
@@ -37,15 +42,14 @@
 
 .user-info p {
   font-size: 14px;
+  padding-left: 200px;
+  padding-right: 200px;
+  text-align: center;
 }
 
 .user-info p {
   padding-bottom: 30px;
 }
-
-
-
-
 
 .follow-buttons button,
 .edit-user-button button,
@@ -61,5 +65,59 @@
 .follow-button > button:hover {
   color: $linen;
   background-color: $charcoal;
+  cursor: pointer;
+}
+
+////////////////////////////////////////
+
+.user-edit-container,
+.user-edit-form {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.user-edit-form {
+  align-items: center;
+}
+
+.user-edit-form > h1 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.user-edit-form textarea {
+  height: 100px;
+  width: 400px;
+}
+
+.user-edit-form img {
+  height: 100px;
+  width: auto;
+}
+
+.user-edit-form button i {
+  margin-right: 10px;
+}
+
+.user-edit-form > button {
+  margin: 10px;
+  padding: 2px 5px;
+  color: $charcoal;
+  border: 1px solid $charcoal;
+}
+
+.user-edit-form > button:hover {
+  color: $linen;
+  background-color: $charcoal;
+  cursor: pointer;
+}
+
+.user-edit-container > button {
+  font-size: 20px;
+}
+
+.user-edit-container > button:hover {
+  color: red;
   cursor: pointer;
 }

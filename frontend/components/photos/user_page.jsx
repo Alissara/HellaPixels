@@ -121,11 +121,13 @@ class UserPage extends React.Component {
                 value={this.state.bio}
                 onChange={this.update('bio')} />
                 <br/>
+              <img src={this.state.profile_url} />
               <button onClick={this.uploadProfile}>
                 <i className="fa fa-cloud-upload" aria-hidden="true"></i>
                 Upload Profile Image
               </button>
                 <br/>
+              <img src={this.state.cover_url} />
               <button onClick={this.uploadCover}>
                 <i className="fa fa-cloud-upload" aria-hidden="true"></i>
                 Upload Cover Image

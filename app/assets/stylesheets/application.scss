@@ -14,7 +14,9 @@
  */
 
 $linen: #F8F3ED;
+$light-gray: #C0C0C0;
 $lightest-gray: #F0F0F0;
+$dark-white: #F9F9F9;
 $charcoal: #202020;
 $white: #FFFFFF;
 
@@ -26,5 +28,6 @@ $raleway: 'Raleway', sans-serif;
 @import "nav_bar"; // 3
 @import "splash"; // 4
 @import "auth_form"; // 5
-@import "userpage"; 
+@import "userpage";
 @import "photos"; // 6
+@import "homepage";

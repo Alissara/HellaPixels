@@ -20,7 +20,8 @@ import HomePage from './home/home';
 const App = () => (
   <div>
 
-    <nav className="navbar">
+    <nav className="nav">
+      <nav className="navbar">
       <Link to="/home" className="header-link">
         <nav className="logo">
           <img src="gridbig2.png" />
@@ -30,6 +31,7 @@ const App = () => (
       <AuthRoute path="/" component={SessionFormContainer}/>
       <ProtectedRoute path="/home" component={GreetingContainer}/>
       <ProtectedRoute path="/users" component={GreetingContainer}/>
+      </nav>
     </nav>
 
     <main className="main">
