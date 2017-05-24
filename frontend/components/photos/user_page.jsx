@@ -222,14 +222,13 @@ class UserPage extends React.Component {
               <i className="fa fa-times" aria-hidden="true"></i>
             </button>
             <h1>Following</h1>
-            <br/>
             <ul>
               {followings.map((following) => {
                 return (
                   <li key={following.id}>
                     <Link to={`/users/${following.id}`} onClick={this.closeFollowingModal}>
                       <img src={following.profile_url} />
-                      <p>{following.username}</p>
+                        <p>{following.username}</p>
                     </Link>
                   </li>
                 );
@@ -253,7 +252,6 @@ class UserPage extends React.Component {
               <i className="fa fa-times" aria-hidden="true"></i>
             </button>
             <h1>Followers</h1>
-            <br/>
             <ul>
               {followers.map((follower) => {
                 return (

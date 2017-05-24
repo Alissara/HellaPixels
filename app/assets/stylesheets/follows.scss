@@ -28,9 +28,15 @@
 .follows-container li a {
   display: flex;
   flex-direction: row;
-  margin: 5px 0px;
+  margin: 10px 0px;
   align-items: center;
 }
+
+.follows-container li a p {
+  font-size: 16px;
+
+}
+
 
 .follows-container li:hover {
   background-color: $light-gray;
@@ -40,16 +46,14 @@
 .follows-container img {
   width: 40px;
   height: 40px;
-
+  margin: 0px 20px;
 }
 
-.follow-container a p {
-  padding-top: 10px;
-}
 
 .follows-container .switchFollow {
+  margin-top: 20px;
   display: flex;
-  font-size: 14px;
+  font-size: 12px;
   justify-content: center;
 }
 
