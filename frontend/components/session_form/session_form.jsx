@@ -106,7 +106,9 @@ class SessionForm extends React.Component {
           style={style}>
 
           <div className="login-form-container">
-            <button onClick={this.closeModal}><i className="fa fa-times" aria-hidden="true"></i></button>
+            <div className="x-button">
+              <button onClick={this.closeModal}><i className="fa fa-times" aria-hidden="true"></i></button>
+            </div>
             <form className="login-form-box">
                 <br/>
               {this.formHeader()}

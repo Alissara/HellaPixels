@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import { Link, withRouter } from 'react-router-dom';
 import style from './modal_style';
 import styleFollow from './modal_follow_style';
+import styleUser from './modal_user_style';
 import merge from 'lodash/merge';
 
 class UserPage extends React.Component {
@@ -175,7 +176,7 @@ class UserPage extends React.Component {
           contentLabel="Modal"
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
-          style={style}>
+          style={styleUser}>
 
           <section className="user-edit-container">
             <button onClick={this.closeModal}>
@@ -216,7 +217,7 @@ class UserPage extends React.Component {
           onRequestClose={this.closeFollowingModal}
           style={styleFollow}>
 
-          <div className="followers-container">
+          <div className="follows-container">
             <button onClick={this.closeFollowingModal}>
               <i className="fa fa-times" aria-hidden="true"></i>
             </button>
@@ -227,14 +228,15 @@ class UserPage extends React.Component {
                 return (
                   <li key={following.id}>
                     <Link to={`/users/${following.id}`} onClick={this.closeFollowingModal}>
-                      {following.username}
+                      <img src={following.profile_url} />
+                      <p>{following.username}</p>
                     </Link>
                   </li>
                 );
               })}
             </ul>
             <br/>
-            <button onClick={this.switchToFollowersModal}>
+            <button onClick={this.switchToFollowersModal} className="switchFollow">
               Followers of {user.username}
             </button>
           </div>
@@ -246,7 +248,7 @@ class UserPage extends React.Component {
           onRequestClose={this.closeFollowersModal}
           style={styleFollow}>
 
-          <div className="followers-container">
+          <div className="follows-container">
             <button onClick={this.closeFollowersModal}>
               <i className="fa fa-times" aria-hidden="true"></i>
             </button>
@@ -257,15 +259,16 @@ class UserPage extends React.Component {
                 return (
                   <li key={follower.id}>
                     <Link to={`/users/${follower.id}`} onClick={this.closeFollowersModal}>
-                      {follower.username}
+                        <img src={follower.profile_url} />
+                        <p>{follower.username}</p>
                     </Link>
                   </li>
                 );
               })}
             </ul>
             <br/>
-            <button onClick={this.switchToFollowingModal}>
-              {user.username} is Following
+            <button onClick={this.switchToFollowingModal} className="switchFollow">
+              <p>{user.username} is Following</p>
             </button>
           </div>
         </Modal>

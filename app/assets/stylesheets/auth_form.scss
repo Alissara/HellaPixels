@@ -6,11 +6,15 @@
   justify-content: center;
 }
 
-.login-form-container > button {
-  cursor: pointer;
+
+.login-form-container > .x-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 20px;
 }
 
-.login-form-container > button:hover {
+.login-form-container > .x-button:hover {
   cursor: pointer;
   color: red;
   font-weight: bold;
@@ -21,6 +25,12 @@
   width: auto;
   display: block;
   text-align: center;
+}
+
+.login-form-box > h3 {
+  background-color: $charcoal;
+  color: $linen;
+  padding: 5px 0px;
 }
 
 .login-form-box > ul {

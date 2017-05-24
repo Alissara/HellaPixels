@@ -83,8 +83,13 @@
 }
 
 .user-edit-form > h1 {
+  width: 100%;
+  padding: 5px 0px;
+  background-color: $charcoal;
+  color: $linen;
   font-weight: bold;
   font-size: 20px;
+  text-align: center;
 }
 
 .user-edit-form textarea {

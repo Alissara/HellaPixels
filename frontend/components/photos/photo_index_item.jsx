@@ -53,14 +53,15 @@ class PhotoIndexItem extends React.Component {
 
   destroyPhoto(e) {
     e.preventDefault();
-    this.closeShowModal();
     this.props.deletePhoto(this.props.photo.id);
+    this.closeShowModal();
   }
 
   editPhoto(e) {
     e.preventDefault();
-    this.closeEditModal();
     this.props.updatePhoto(this.state.photo);
+    this.closeEditModal();
+    this.openShowModal();
   }
 
   updateButton() {

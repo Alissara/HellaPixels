@@ -1,3 +1,59 @@
 // Place all the styles related to the Follows controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.follows-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.follows-container i {
+  font-size: 20px;
+}
+
+.follows-container i:hover {
+  color: red;
+}
+
+.follows-container h1 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: $charcoal;
+  color: $linen;
+  padding: 5px 0px;
+  margin: 5px 0px;
+}
+
+.follows-container li a {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0px;
+  align-items: center;
+}
+
+.follows-container li:hover {
+  background-color: $light-gray;
+}
+
+
+.follows-container img {
+  width: 40px;
+  height: 40px;
+
+}
+
+.follow-container a p {
+  padding-top: 10px;
+}
+
+.follows-container .switchFollow {
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+}
+
+.follows-container .switchFollow:hover {
+  color: blue;
+  cursor: pointer;
+}
