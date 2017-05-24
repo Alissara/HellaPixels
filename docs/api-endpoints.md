@@ -30,7 +30,5 @@
 
 ### Follows
 
-- `GET /api/follows`
-
 - `POST /api/follows`
 - `DELETE /api/follows/:followingId`

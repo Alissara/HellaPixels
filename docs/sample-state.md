@@ -19,7 +19,13 @@
       description: "Photo description",
       user_id: 1,
     },
-    photo: 1
+    2: {
+      id: 2,
+      url: "/photo/url",
+      title: "Photo title",
+      description: "Photo description",
+      user_id: 1,
+    }
   },
   userDetail: {
     id: 1,
@@ -28,8 +34,7 @@
     cover_url: "/cover/url",
     profile_url: "/profile/url",
     followings: [],
-    followers: [],
-    photos: []
+    followers: []
   }
 }
 

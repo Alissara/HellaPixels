@@ -34,14 +34,9 @@
 
 ## Routes
 
-|Path | Component   |
-|-------|-------------|
-| "/signup" | "AuthFormContainer" |
-| "/login" | "AuthFormContainer" |
-| "/" | "SplashContainer" |
-| "/home" | "HomeFeedContainer" |
+|       Path       |      Component         |
+|------------------|------------------------|
+| "/"              | "AuthFormContainer"    |
+| "/"              | "SplashContainer"      |
+| "/home"          | "HomeFeedContainer"    |
 | "/users/:userId" | "UserProfileContainer" |
-| "/users/:userId/edit" | "UserEdit" |
-| "/users/:userId/follows" | "FollowsContainer" |
-| "/photos/:photoId" | "PhotoContainer" |
-| "/photos" | "PhotoUploadContainer" |
