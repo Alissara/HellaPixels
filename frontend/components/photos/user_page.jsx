@@ -155,10 +155,10 @@ class UserPage extends React.Component {
     return (
       <section className="user-container">
         <figure className="user-cover-img">
-          <img src={user.cover_url} secure="true"/>
+          <img src={user.cover_url} />
         </figure>
         <figcaption className="user-info">
-          <img src={user.profile_url} secure="true"/>
+          <img src={user.profile_url} />
           <h1>{user.username}</h1>
           <p>{user.bio}</p>
           <div className="follow-buttons">
