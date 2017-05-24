@@ -31,7 +31,7 @@ class Greeting extends React.Component {
       window.cloudinary_options,
       function(error, images) {
         if (error === null) {
-          this.setState({ url: images[0].url });
+          this.setState({ url: images[0].secure_url });
           this.openModal();
         }
       }.bind(this)

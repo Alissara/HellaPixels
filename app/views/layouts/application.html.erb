@@ -16,7 +16,10 @@
     <script type="text/javascript">
         window.cloudinary_options = {
         cloud_name: "<%= ENV['CLOUD_NAME'] %>",
-        upload_preset: "<%= ENV['UPLOAD_PRESET'] %>"
+        upload_preset: "<%= ENV['UPLOAD_PRESET'] %>",
+        theme: "minimal",
+        multiple: false,
+        cropping: "server"
         };
     </script>
 

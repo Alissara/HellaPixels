@@ -131,7 +131,7 @@ class UserPage extends React.Component {
       window.cloudinary_options,
       function(error, images) {
         if (error === null) {
-          this.setState({ profile_url: images[0].url });
+          this.setState({ profile_url: images[0].secure_url });
         }
       }.bind(this)
     );
@@ -143,7 +143,7 @@ class UserPage extends React.Component {
       window.cloudinary_options,
       function(error, images) {
         if (error === null) {
-          this.setState({ cover_url: images[0].url });
+          this.setState({ cover_url: images[0].secure_url });
         }
       }.bind(this)
     );
