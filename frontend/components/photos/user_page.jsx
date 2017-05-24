@@ -155,7 +155,7 @@ class UserPage extends React.Component {
     return (
       <section className="user-container">
         <figure className="user-cover-img">
-          <img src={user.cover_url} />
+          <img src={user.cover_url} secure="true"/>
         </figure>
         <figcaption className="user-info">
           <img src={user.profile_url} secure="true"/>
