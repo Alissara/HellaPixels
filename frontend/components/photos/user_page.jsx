@@ -158,7 +158,7 @@ class UserPage extends React.Component {
           <img src={user.cover_url} />
         </figure>
         <figcaption className="user-info">
-          <img src={user.profile_url} />
+          <img src={user.profile_url} secure="true"/>
           <h1>{user.username}</h1>
           <p>{user.bio}</p>
           <div className="follow-buttons">
