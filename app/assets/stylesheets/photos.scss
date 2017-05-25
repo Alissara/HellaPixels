@@ -90,12 +90,14 @@
 
 .photo-box {
   margin: 0px;
-  // background-color: blue;
+
   position        : fixed;
-  top             : 60px;
-  left            : 50px;
-  right           : 340px;
-  bottom          : 50px;
+  top             : 110px;
+  left            : 110px;
+  right           : 400px;
+  bottom          : 110px;
+
+  // background-color: blue;
 
 }
 
@@ -109,14 +111,14 @@
 
 .photo-info {
   border-left: 2px solid $light-gray;
-  position        : fixed;
-  top             : 60px;
-  right           : 50px;
-  bottom          : 50px;
-
   width: 240px;
-
   padding-left: 20px;
+  position        : fixed;
+  top             : 110px;
+  right           : 110px;
+  bottom          : 110px;
+
+
 
   // background-color: red;
 }
@@ -133,7 +135,7 @@
 .photo-user-info img {
   height: 50px;
   width: 50px;
-  margin: 0px 10px;
+  margin-right: 10px;
 }
 
 .photo-details,
@@ -143,14 +145,14 @@
 	display: flex;
 	flex-direction: column;
   margin-left: 10px;
-  margin-top: 25px;
+  margin-top: 30px;
 
   // background-color: red;
 }
 
 .photo-details h2,
 .photo-form-box h1 {
-  margin: 15px 5px;
+  margin: 15px 0px;
   font-weight: bold;
   font-size: 20px;
 }
@@ -164,7 +166,7 @@
 }
 
 .photo-details p {
-  margin: 15px 5px;
+  // margin: 15px 5px;
   font-size: 14px;
 
 }
