@@ -236,7 +236,7 @@ class UserPage extends React.Component {
             </ul>
             <br/>
             <button onClick={this.switchToFollowersModal} className="switchFollow">
-              Followers of {user.username}...
+              {user.username}{`'`}s Followers...
             </button>
           </div>
         </Modal>
@@ -266,7 +266,7 @@ class UserPage extends React.Component {
             </ul>
             <br/>
             <button onClick={this.switchToFollowingModal} className="switchFollow">
-              <p>{user.username} is Following</p>...
+              {user.username} is Following...
             </button>
           </div>
         </Modal>

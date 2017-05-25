@@ -24,5 +24,11 @@ class Photo < ApplicationRecord
       .where(user_id: id)
   end
 
+  def self.home_feed(id)
+    Photo
+      .joins("INNER JOIN follows ON photos.user_id = follows.following_id")
+      .where("follows.follower_id = :id", id: id)
+  end
+
 
 end

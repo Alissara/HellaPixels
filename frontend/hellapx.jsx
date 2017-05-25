@@ -13,16 +13,18 @@ import Root from './components/root';
 // window.logout = logout;
 // window.signup = signup;
 
-// import { fetchPhotos,
-//          fetchPhoto,
-//          createPhoto,
-//          updatePhoto,
-//          deletePhoto } from './actions/photo_actions';
-// window.fetchPhotos = fetchPhotos;
-// window.fetchPhoto = fetchPhoto;
-// window.createPhoto = createPhoto;
-// window.updatePhoto = updatePhoto;
-// window.deletePhoto = deletePhoto;
+import { fetchPhotos,
+         fetchPhoto,
+         createPhoto,
+         updatePhoto,
+         deletePhoto,
+         fetchHomePhotos } from './actions/photo_actions';
+window.fetchPhotos = fetchPhotos;
+window.fetchPhoto = fetchPhoto;
+window.createPhoto = createPhoto;
+window.updatePhoto = updatePhoto;
+window.deletePhoto = deletePhoto;
+window.fetchHomePhotos = fetchHomePhotos;
 
 import { fetchUser, updateUser } from './actions/user_actions';
 window.fetchUser = fetchUser;

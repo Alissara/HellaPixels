@@ -25,6 +25,8 @@
       title: "Photo title",
       description: "Photo description",
       user_id: 1,
+      username: "user's username",
+      profile_url: "user's profile_url"
     }
   },
   userDetail: {

@@ -6,6 +6,11 @@ class Api::PhotosController < ApplicationController
     render 'api/photos/index'
   end
 
+  def home
+    @photos = Photo.home_feed(current_user.id)
+    render 'api/photos/home'
+  end
+
   def show
     @photo = Photo.find(params[:id])
     render 'api/photos/show'

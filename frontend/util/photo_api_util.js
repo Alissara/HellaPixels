@@ -6,6 +6,13 @@ export const fetchPhotos = photo => (
   })
 );
 
+export const fetchHomePhotos = () => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/photos/home'
+  })
+);
+
 export const fetchPhoto = id => (
   $.ajax({
     method: 'GET',

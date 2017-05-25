@@ -25,6 +25,11 @@ export const fetchPhotos = userid => dispatch => (
     .then(photos => dispatch(receivePhotos(photos)))
 );
 
+export const fetchHomePhotos = () => dispatch => (
+  APIUtil.fetchHomePhotos()
+    .then(photos => dispatch(receivePhotos(photos)))
+);
+
 export const fetchPhoto = id => dispatch => (
   APIUtil.fetchPhoto(id)
     .then(photo => dispatch(receivePhoto(photo)))
