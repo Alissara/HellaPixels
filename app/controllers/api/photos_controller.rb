@@ -1,4 +1,5 @@
 class Api::PhotosController < ApplicationController
+  before_action :ensure_authorization, only: [:update, :destroy]
 
   def index
     @photos = Photo.find_by_user_id(params[:user_id])
@@ -41,6 +42,10 @@ class Api::PhotosController < ApplicationController
 
   def photo_params
     params.require(:photo).permit(:url, :title, :description, :user_id)
+  end
+
+  def ensure_authorization
+    current_user.id == Photo.find(params[:id]).user_id
   end
 
 end

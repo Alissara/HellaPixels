@@ -37,6 +37,7 @@ class PhotoIndexItem extends React.Component {
 
   closeEditModal() {
     this.setState({ modalEditOpen: false });
+    this.setState({ modalShowOpen: true });
   }
 
 
@@ -61,7 +62,6 @@ class PhotoIndexItem extends React.Component {
     e.preventDefault();
     this.props.updatePhoto(this.state.photo);
     this.closeEditModal();
-    this.openShowModal();
   }
 
   updateButton() {
@@ -100,23 +100,28 @@ class PhotoIndexItem extends React.Component {
             <button onClick={this.closeShowModal}>
               <i className="fa fa-times" aria-hidden="true"></i>
             </button>
+
             <section className="photo-show">
               <figure className="photo-box">
                 <img src={photo.url} />
               </figure>
+
               <aside className="photo-info">
                 <header className="photo-user-info">
                   <img src={user.profile_url}/>
                   <h1>{user.username}</h1>
                 </header>
+
                 <figcaption className="photo-details">
                   <h2>{photo.title}</h2>
                   <br/>
                   <p>{photo.description}</p>
                 </figcaption>
+
                 {this.editButton()}
               </aside>
             </section>
+
           </section>
         </Modal>
 

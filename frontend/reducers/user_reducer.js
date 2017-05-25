@@ -2,6 +2,10 @@ import merge from 'lodash/merge';
 import { RECEIVE_USER } from '../actions/user_actions';
 
 const defaultUser = {
+  username: "",
+  bio: "",
+  cover_url: "",
+  profile_url: "",
   followers: [],
   followings: []
 };

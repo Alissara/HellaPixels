@@ -1,4 +1,5 @@
 class Api::UsersController < ApplicationController
+  before_action :ensure_authorization, only: [:update]
 
   def show
     @user = User.find(params[:id])
@@ -9,6 +10,8 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      Follow.create!(following_id: @user.id, follower_id: 1)
+      Follow.create!(following_id: 1, follower_id: @user.id)
       login(@user)
       render 'api/users/show'
     else
@@ -23,10 +26,13 @@ class Api::UsersController < ApplicationController
   end
 
   private
-
   def user_params
     params
       .require(:user)
       .permit(:username, :password, :bio, :cover_url, :profile_url)
+  end
+
+  def ensure_authorization
+    current_user.id == params[:id]
   end
 end

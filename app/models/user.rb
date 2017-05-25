@@ -79,7 +79,7 @@ class User < ApplicationRecord
   end
 
   def set_default
-    self.profile_url ||= 'https://robohash.org/my-own-slug.jpg?size=50x50'
+    self.profile_url ||= 'https://68.media.tumblr.com/36f3f6b6b1699e13bb63c042a53b6fff/tumblr_o51oavbMDx1ugpbmuo1_250.png'
   end
 
 end
