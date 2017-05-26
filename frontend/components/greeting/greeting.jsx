@@ -49,6 +49,7 @@ class Greeting extends React.Component {
   uploadPhoto(e) {
     e.preventDefault();
     this.props.createPhoto(this.state);
+    this.props.history.push(`/users/${this.props.currentUser.id}`);
   }
 
   openModal() {

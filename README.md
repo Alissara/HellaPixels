@@ -1,70 +1,39 @@
 # HellaPixels
 
-[Heroku link][heroku]
+[HellaPixels Live][heroku]
 
-[Trello link][trello]
+[heroku]: http://hellapixels.herokuapp.com/
 
-[heroku]: https://hellapixels.herokuapp.com/
-[trello]: https://trello.com/b/35ntBTRh/hellapixels
+HellaPixels is a full-stack photo sharing web application inspired by 500px. It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React-Redux on the frontend.
 
-## Minimum Viable Product
+![screenshot](http://res.cloudinary.com/da6jfurzj/image/upload/v1495825547/splash_llhnun.png)
 
-HellaPixels is a web application inspired by 500px built using Ruby on Rails
-and React/Redux.  
+## Features
 
-By the end of Week 9, this app will, at a minimum, satisfy the
-following criteria with smooth, bug-free navigation, adequate seed data and
-sufficient CSS styling:
+### User Profile Pages
 
-- [ ] Hosting on Heroku
-- [ ] New account creation, login, and guest/demo login
-- [ ] Post Pictures
-- [ ] Follows
-- [ ] Home Feed
-- [ ] Profile Page
-- [ ] Production README
+Sign up for an account and create/edit the User Profile Page by including a User bio, uploading cover and profile images.
 
-## Design Docs
-* [View Wireframes][wireframes]
-* [React Components][components]
-* [API endpoints][api-endpoints]
-* [DB schema][schema]
-* [Sample State][sample-state]
+![image of Create/Edit User](http://res.cloudinary.com/da6jfurzj/image/upload/v1495833451/Screen_Shot_2017-05-26_at_2.17.08_PM_hqhh8p.png)
 
-[wireframes]: docs/wireframes
-[components]: docs/component-hierarchy.md
-[sample-state]: docs/sample-state.md
-[api-endpoints]: docs/api-endpoints.md
-[schema]: docs/schema.md
+### Upload and Manage Images
 
-## Implementation Timeline
+Users can upload, edit and delete photos on their User's profile page. User's can only manage their own photos and no one else's.
 
-### Phase 1: Backend setup and Front End User Authentication (2 days)
+![image of Create/Edit Image](http://res.cloudinary.com/da6jfurzj/image/upload/v1495832607/Screen_Shot_2017-05-26_at_2.02.35_PM_xql36d.png)
 
-**Objective:** Functioning rails project with front-end Authentication
+### Home Feed and Follows
 
-### Phase 2: Photo Model, API, and components (2 days)
+Users can choose to follow or unfollow each other's Profile pages. Photo posts made by users the current user is following will populate on the Home Feed.
 
-**Objective:** Photos can be uploaded, viewed, edited and destroyed through
-the API.
+![image of Home Feed](http://res.cloudinary.com/da6jfurzj/image/upload/v1495833044/Screen_Shot_2017-05-26_at_2.08.32_PM_2_ikbubk.png)
 
-### Phase 3: Profile Page (2 days)
+## Future Improvements
 
-**Objective:** Profile page displays the user's details and photos.
+### Infinite Scroll
 
-### Phase 4: Follows (1 day)
+To optimize page load, an infinite scroll will be implemented, which will allow users to scroll through many posts on the home feed more efficiently.
 
-**Objective:** User can follow/unfollow other users. User's profile page lists followers and followings.
+### Tags & Search
 
-### Phase 5: Home Feed (2 day)
-
-**Objective:** Home Feed displays all photos from users followed by current user.
-
-
-### Bonus Features (TBD)
-- [ ] Infinite scroll
-- [ ] Tags
-- [ ] Discover Page
-- [ ] Search Photos
-- [ ] Comments
-- [ ] Likes
+Allow users to discover new photos by implementing image Tags and a search feature to find images based on user-generated Tags. Also create location tags so users can search for images based on location and render them on a map.
