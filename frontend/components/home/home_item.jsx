@@ -31,6 +31,11 @@ class HomeItem extends React.Component {
         <a onClick={this.openShowModal}>
             <img src={photo.url} alt={photo.title} />
         </a>
+        <div className="overlay" onClick={this.openShowModal}>
+          <div className="text">
+            {photo.title} by {photo.username}
+          </div>
+        </div>
 
         <Modal
           contentLabel="Modal"

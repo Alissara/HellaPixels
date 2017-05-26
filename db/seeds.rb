@@ -312,7 +312,48 @@ g9 = Photo.create(
   description: ""
 )
 
+g10 = Photo.create(
+  user_id: guest.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
 #natasha
+n6 = Photo.create(
+  user_id: natasha.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+n7 = Photo.create(
+  user_id: natasha.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+n8 = Photo.create(
+  user_id: natasha.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+n9 = Photo.create(
+  user_id: natasha.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+n10 = Photo.create(
+  user_id: natasha.id,
+  title: "",
+  url: "",
+  description: ""
+)
 
 #karla
 k6 = Photo.create(
@@ -322,7 +363,69 @@ k6 = Photo.create(
   description: ""
 )
 
+k7 = Photo.create(
+  user_id: karla.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+k8 = Photo.create(
+  user_id: karla.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+k9 = Photo.create(
+  user_id: karla.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+k10 = Photo.create(
+  user_id: karla.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
 #xiaojun
+x6 = Photo.create(
+  user_id: xiaojun.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+x7 = Photo.create(
+  user_id: xiaojun.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+x8 = Photo.create(
+  user_id: xiaojun.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+x9 = Photo.create(
+  user_id: xiaojun.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+x10 = Photo.create(
+  user_id: xiaojun.id,
+  title: "",
+  url: "",
+  description: ""
+)
 
 #charlie
 c6 = Photo.create(
@@ -332,7 +435,104 @@ c6 = Photo.create(
   description: ""
 )
 
-#otto
+c7 = Photo.create(
+  user_id: charlie.id,
+  title: "",
+  url: "",
+  description: ""
+)
 
+c8 = Photo.create(
+  user_id: charlie.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+c9 = Photo.create(
+  user_id: charlie.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+c10 = Photo.create(
+  user_id: charlie.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+#otto
+o6 = Photo.create(
+  user_id: otto.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+o7 = Photo.create(
+  user_id: otto.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+o8 = Photo.create(
+  user_id: otto.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+o9 = Photo.create(
+  user_id: otto.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+o10 = Photo.create(
+  user_id: otto.id,
+  title: "",
+  url: "",
+  description: ""
+)
 
 #####################################################################################################################
+
+#guest
+g11 = Photo.create(
+  user_id: guest.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+g12 = Photo.create(
+  user_id: guest.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+g13 = Photo.create(
+  user_id: guest.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+g14 = Photo.create(
+  user_id: guest.id,
+  title: "",
+  url: "",
+  description: ""
+)
+
+g15 = Photo.create(
+  user_id: guest.id,
+  title: "",
+  url: "",
+  description: ""
+)

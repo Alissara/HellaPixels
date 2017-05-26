@@ -43,12 +43,13 @@ const App = () => (
       render={ () =>
         <footer className="footer">
           <section className="foot-left">
-            <p>About</p>
+            <h1>About</h1>
+            <p>HellaPixels is a web application inspired by 500px, a photo community for discovering and sharing inspiring photography powered by creative people worldwide.</p>
           </section>
           <section className="foot-right">
-            <a href="/#">Github</a>
-            <a href="/#">LinkedIn</a>
-            <a href="/#">Contact</a>
+            <a href="https://github.com/Alissara">Github</a>
+            <a href="https://www.linkedin.com/in/alissara-rojanapairat">LinkedIn</a>
+            <a href="mailto:alissara.r@gmail.com">Contact</a>
           </section>
         </footer>
       }

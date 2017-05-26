@@ -63,7 +63,21 @@
   margin: 10px;
 }
 
+.foot-left {
+  width: 500px
+}
+
+.foot-left h1,
+.foot-left p {
+  margin: 10px;
+}
+
+.foot-left p {
+  font-size: 14px;
+}
+
 .foot-right a {
+  font-size: 14px;
   justify-content: space-around;
   padding: 10px;
   text-align: center;

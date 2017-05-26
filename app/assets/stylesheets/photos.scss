@@ -13,7 +13,8 @@
 .item,
 .item-home {
   margin: 10px;
-  // border: 1px solid black;
+
+  position: relative;
 }
 
 
@@ -22,14 +23,44 @@
   /* Just in case there are inline attributes */
   width: 100% !important;
   height: auto !important;
+
+  display: block;
+  cursor: pointer;
 }
 
-.item a img:hover,
-.item-home a img:hover {
-	cursor: pointer;
-	// box-shadow: 0px 1px 1px 2px rgba(0,0,0, .5);
-  border: solid 1px grey;
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $charcoal;
+  opacity: 0.8;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ;
 }
+
+.item-home:hover .overlay,
+.item:hover .overlay {
+  height: 30px;
+  cursor: pointer;
+}
+
+.text {
+  white-space: nowrap;
+  color: $linen;
+  font-size: 14px;
+  position: absolute;
+  // overflow: hidden;
+  top: 50%;
+  left: 10px;
+  // transform: translate(-50%, -50%);
+  // -ms-transform: translate(-50%, -50%);
+}
+
+
+
 
 @media (max-width: 1200px) {
   .grid,
