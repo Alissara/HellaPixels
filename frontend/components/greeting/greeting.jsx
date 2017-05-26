@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import { Link, withRouter } from 'react-router-dom';
 import style from './modal_style';
+import styleError from './modal_error_style';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -10,13 +11,18 @@ class Greeting extends React.Component {
       url: '',
       title: '',
       description: '',
-      modalOpen: false
+      modalOpen: false,
+      modalErrorOpen: false
     };
 
     this.upload = this.upload.bind(this);
     this.uploadPhoto = this.uploadPhoto.bind(this);
+
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.openErrorModal = this.openErrorModal.bind(this);
+    this.closeErrorModal = this.closeErrorModal.bind(this);
+
   }
 
   componentWillReceiveProps(nextProps) {
@@ -33,6 +39,8 @@ class Greeting extends React.Component {
         if (error === null) {
           this.setState({ url: images[0].secure_url });
           this.openModal();
+        } else {
+          this.openErrorModal();
         }
       }.bind(this)
     );
@@ -54,6 +62,14 @@ class Greeting extends React.Component {
       title: '',
       description: ''
     });
+  }
+
+  openErrorModal() {
+    this.setState({ modalErrorOpen: true });
+  }
+
+  closeErrorModal() {
+    this.setState({ modalErrorOpen: false });
   }
 
   update(field) {
@@ -132,6 +148,26 @@ class Greeting extends React.Component {
           </section>
         </Modal>
 
+        <Modal
+          contentLabel="Modal"
+          isOpen={this.state.modalErrorOpen}
+          onRequestClose={this.closeErrorModal}
+          style={styleError}>
+
+          <section className="error-upload">
+            <button onClick={this.closeErrorModal}>
+              <i className="fa fa-times" aria-hidden="true"></i>
+            </button>
+            <h1>Image Upload Failed!</h1>
+            <div className="error-upload-button">
+              <button onClick={this.closeErrorModal}>Cancel</button>
+              <button onClick={this.upload}>
+                <i className="fa fa-cloud-upload" aria-hidden="true"></i>
+                Try Again
+              </button>
+            </div>
+          </section>
+        </Modal>
       </nav>
     );
   }

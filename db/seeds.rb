@@ -100,35 +100,7 @@ g5 = Photo.create(
   description: ""
 )
 
-g6 = Photo.create(
-  user_id: guest.id,
-  title: "Random Alley",
-  url: "https://res.cloudinary.com/da6jfurzj/image/upload/v1495643655/sjvwb7ygwf8nhhpywbf0.jpg",
-  description: ""
-)
-
-g7 = Photo.create(
-  user_id: guest.id,
-  title: "Big Wheels",
-  url: "https://res.cloudinary.com/da6jfurzj/image/upload/v1495658424/yqybdo6rsfzsmwzgcfet.jpg",
-  description: ""
-)
-
-g8 = Photo.create(
-  user_id: guest.id,
-  title: "Hanging Laundry",
-  url: "https://res.cloudinary.com/da6jfurzj/image/upload/v1495658452/p2mrt0jwzvm2wbres84y.jpg",
-  description: ""
-)
-
-g9 = Photo.create(
-  user_id: guest.id,
-  title: "European Adventures",
-  url: "https://res.cloudinary.com/da6jfurzj/image/upload/v1495644130/uhl7kidqpmju8nofwgo8.jpg",
-  description: ""
-)
-
-##### natasha #####
+#natasha
 n1 = Photo.create(
   user_id: natasha.id,
   title: "Waterfall Hiking",
@@ -164,7 +136,7 @@ n5 = Photo.create(
   description: ""
 )
 
-##### karla #####
+#karla
 k1 = Photo.create(
   user_id: karla.id,
   title: "New Zealand Beach",
@@ -200,14 +172,7 @@ k5 = Photo.create(
   description: ""
 )
 
-k6 = Photo.create(
-  user_id: karla.id,
-  title: "Getting Dark",
-  url: "https://res.cloudinary.com/da6jfurzj/image/upload/v1495645381/nv9zsq5lf1pmi0hvq1ox.jpg",
-  description: ""
-)
-
-##### xiaojun #####
+#xiaojun
 x1 = Photo.create(
   user_id: xiaojun.id,
   title: "Self Portrait",
@@ -243,7 +208,7 @@ x5 = Photo.create(
   description: ""
 )
 
-##### charlie #####
+#charlie
 c1 = Photo.create(
   user_id: charlie.id,
   title: "Iceland Plane Wreckage",
@@ -279,14 +244,8 @@ c5 = Photo.create(
   description: ""
 )
 
-c6 = Photo.create(
-  user_id: charlie.id,
-  title: "Northern Lights",
-  url: "https://res.cloudinary.com/da6jfurzj/image/upload/v1495647311/linkfoofhy3fam5uaml2.jpg",
-  description: ""
-)
 
-##### otto #####
+#otto
 o1 = Photo.create(
   user_id: otto.id,
   title: "Herding",
@@ -321,3 +280,59 @@ o5 = Photo.create(
   url: "https://res.cloudinary.com/da6jfurzj/image/upload/v1495757225/5_tm5fvo.jpg",
   description: ""
 )
+
+#####################################################################################################################
+
+#guest
+g6 = Photo.create(
+  user_id: guest.id,
+  title: "Random Alley",
+  url: "https://res.cloudinary.com/da6jfurzj/image/upload/v1495643655/sjvwb7ygwf8nhhpywbf0.jpg",
+  description: ""
+)
+
+g7 = Photo.create(
+  user_id: guest.id,
+  title: "Big Wheels",
+  url: "https://res.cloudinary.com/da6jfurzj/image/upload/v1495658424/yqybdo6rsfzsmwzgcfet.jpg",
+  description: ""
+)
+
+g8 = Photo.create(
+  user_id: guest.id,
+  title: "Hanging Laundry",
+  url: "https://res.cloudinary.com/da6jfurzj/image/upload/v1495658452/p2mrt0jwzvm2wbres84y.jpg",
+  description: ""
+)
+
+g9 = Photo.create(
+  user_id: guest.id,
+  title: "European Adventures",
+  url: "https://res.cloudinary.com/da6jfurzj/image/upload/v1495644130/uhl7kidqpmju8nofwgo8.jpg",
+  description: ""
+)
+
+#natasha
+
+#karla
+k6 = Photo.create(
+  user_id: karla.id,
+  title: "Getting Dark",
+  url: "https://res.cloudinary.com/da6jfurzj/image/upload/v1495645381/nv9zsq5lf1pmi0hvq1ox.jpg",
+  description: ""
+)
+
+#xiaojun
+
+#charlie
+c6 = Photo.create(
+  user_id: charlie.id,
+  title: "Northern Lights",
+  url: "https://res.cloudinary.com/da6jfurzj/image/upload/v1495647311/linkfoofhy3fam5uaml2.jpg",
+  description: ""
+)
+
+#otto
+
+
+#####################################################################################################################

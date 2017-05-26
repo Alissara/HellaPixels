@@ -81,16 +81,17 @@
 
 .photo-show-container button,
 .photo-edit-container button,
-.photo-create-container button {
+.photo-create-container button,
+.error-upload button {
   font-size: 20px;
 }
 
 .photo-show-container button:hover,
 .photo-edit-container button:hover,
-.photo-create-container button:hover {
+.photo-create-container button:hover,
+.error-upload button:hover {
   color: red;
 	cursor: pointer;
-
 }
 
 .photo-show,
@@ -168,18 +169,18 @@
 .photo-details,
 .photo-form-box {
   padding: 10px;
-  height: 400px;
+  height: 200px;
 	display: flex;
 	flex-direction: column;
   margin-left: 10px;
-  margin-top: 30px;
+  margin-top: 20px;
 
   // background-color: red;
 }
 
 .photo-details h2,
 .photo-form-box h1 {
-  margin: 15px 0px;
+  margin: 10px 0px;
   font-weight: bold;
   font-size: 20px;
 }
@@ -218,7 +219,8 @@
 
 .edit-button button,
 .update-button button,
-.create-button button {
+.create-button button,
+.error-upload-button button {
   padding: 2px 5px;
   color: $charcoal;
   border: 1px solid $charcoal;
@@ -227,7 +229,8 @@
 
 .edit-button button:hover,
 .update-button button:hover,
-.create-button button:hover {
+.create-button button:hover,
+.error-upload-button button:hover {
   color: $linen;
   background-color: $charcoal;
 	cursor: pointer;
