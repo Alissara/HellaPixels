@@ -28,6 +28,7 @@ class Photo < ApplicationRecord
     Photo
       .joins("INNER JOIN follows ON photos.user_id = follows.following_id")
       .where("follows.follower_id = :id", id: id)
+      .limit(30)
   end
 
 

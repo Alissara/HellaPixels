@@ -14,8 +14,7 @@ import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
 import SplashContainer from  './splash/splash_container';
 import PhotoIndexContainer from './photos/photo_index_container';
-
-import HomePage from './home/home';
+import HomePageContainer from './home/home_container';
 
 const App = () => (
   <div>
@@ -36,7 +35,7 @@ const App = () => (
 
     <main className="main">
         <Route exact path="/" component={SplashContainer} />
-        <Route path="/home" component={HomePage} />
+        <Route path="/home" component={HomePageContainer} />
         <Route path="/users/:userId" component={PhotoIndexContainer} />
     </main>
 

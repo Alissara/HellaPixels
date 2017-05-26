@@ -8,10 +8,11 @@ class Api::UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    demo_id = User.find_by(username: "Guest").id
 
     if @user.save
-      Follow.create!(following_id: @user.id, follower_id: 1)
-      Follow.create!(following_id: 1, follower_id: @user.id)
+      Follow.create(following_id: @user.id, follower_id: demo_id)
+      Follow.create(following_id: demo_id, follower_id: @user.id)
       login(@user)
       render 'api/users/show'
     else
