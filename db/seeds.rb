@@ -718,3 +718,221 @@ o15 = Photo.create(
 )
 
 #####################################################################################################################
+
+#guest
+g16 = Photo.create(
+  user_id: guest.id,
+  title: "Golden Gate",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495832329/zx0icgsvknszejsd5pjt.jpg",
+  description: ""
+)
+
+g17 = Photo.create(
+  user_id: guest.id,
+  title: "Baker Beach",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495643784/e3brtdhxcb7ztbaoiuf3.jpg",
+  description: ""
+)
+
+g18 = Photo.create(
+  user_id: guest.id,
+  title: "Night",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495643852/jnq2udsdbveu6ferfvf6.jpg",
+  description: ""
+)
+
+g19 = Photo.create(
+  user_id: guest.id,
+  title: "Night Shot",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495643893/psdkdpn2mxmrkfdqab3i.jpg",
+  description: ""
+)
+
+g20 = Photo.create(
+  user_id: guest.id,
+  title: "Desert",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495643926/sw08utokjzrtfyiniyse.jpg",
+  description: ""
+)
+
+#natasha
+n16 = Photo.create(
+  user_id: natasha.id,
+  title: "Reflection",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495644827/fyahbdtxbhgnqjkshvlv.jpg",
+  description: ""
+)
+
+n17 = Photo.create(
+  user_id: natasha.id,
+  title: "Milky Way",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495644857/uxzqldnnojjbxkjtabax.jpg",
+  description: ""
+)
+
+n18 = Photo.create(
+  user_id: natasha.id,
+  title: "Playing with light",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495644877/ibelht8g29byhx9ughbf.jpg",
+  description: ""
+)
+
+n19 = Photo.create(
+  user_id: natasha.id,
+  title: "Mountain Landscape",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495658033/cqtoyv3t5fxqw2iig1jz.jpg",
+  description: ""
+)
+
+n20 = Photo.create(
+  user_id: natasha.id,
+  title: "Hiking",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495644971/muaygprjikct7olrto6f.jpg",
+  description: ""
+)
+
+#karla
+k16 = Photo.create(
+  user_id: karla.id,
+  title: "Waterfall Hike",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495645569/gzznl9oxlyyq3j11wjaw.jpg",
+  description: ""
+)
+
+k17 = Photo.create(
+  user_id: karla.id,
+  title: "Waterfall Hike",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495645588/fgy88ykti2dqlriwvxfy.jpg",
+  description: ""
+)
+
+k18 = Photo.create(
+  user_id: karla.id,
+  title: "Waterfall Hike",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495645606/khefbx8jgoaasvzqzjjk.jpg",
+  description: ""
+)
+
+k19 = Photo.create(
+  user_id: karla.id,
+  title: "New Zealand",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495645444/bnatm87bjnhvifgapict.jpg",
+  description: ""
+)
+
+k20 = Photo.create(
+  user_id: karla.id,
+  title: "New Zealand",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495645458/wllulwuklwigbgddt8ip.jpg",
+  description: ""
+)
+
+#xiaojun
+x16 = Photo.create(
+  user_id: xiaojun.id,
+  title: "Road Trip",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495646457/ksi0v2k2ovh0j67ctpjc.jpg",
+  description: ""
+)
+
+x17 = Photo.create(
+  user_id: xiaojun.id,
+  title: "Road Trip",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495646469/exakxxpaof6a9vcxv4lk.jpg",
+  description: ""
+)
+
+x18 = Photo.create(
+  user_id: xiaojun.id,
+  title: "Dogs in the Office",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495646299/bioctn3l2emzkhty4ywk.jpg",
+  description: ""
+)
+
+x19 = Photo.create(
+  user_id: xiaojun.id,
+  title: "Dogs in the Office",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495646312/sr7h7t40a9pwerusswpj.jpg",
+  description: ""
+)
+
+x20 = Photo.create(
+  user_id: xiaojun.id,
+  title: "Yosemite",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495658368/xhqnae87owryg4ciil2c.jpg",
+  description: ""
+)
+
+#charlie
+c16 = Photo.create(
+  user_id: charlie.id,
+  title: "Camping",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495647151/mit5meyft7pj6a00zifl.jpg",
+  description: ""
+)
+
+c17 = Photo.create(
+  user_id: charlie.id,
+  title: "Camping",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495647163/hdvbbqruywjdyidswd3j.jpg",
+  description: ""
+)
+
+c18 = Photo.create(
+  user_id: charlie.id,
+  title: "Hiking",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495647177/cmoh0cqyueap5idpkry0.jpg",
+  description: ""
+)
+
+c19 = Photo.create(
+  user_id: charlie.id,
+  title: "On the Edge",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495647235/nuqrdntrsuacappljx4v.jpg",
+  description: ""
+)
+
+c20 = Photo.create(
+  user_id: charlie.id,
+  title: "Horseshoe",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495647249/jqfnphjtpr6n61nerxys.jpg",
+  description: ""
+)
+
+#otto
+o16 = Photo.create(
+  user_id: otto.id,
+  title: "Vatican",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495658696/sjibyfsxwtbdkdp5hbx4.jpg",
+  description: ""
+)
+
+o17 = Photo.create(
+  user_id: otto.id,
+  title: "Pantheon",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495658724/lzzpura4ayzznxzoyhd8.jpg",
+  description: ""
+)
+
+o18 = Photo.create(
+  user_id: otto.id,
+  title: "Colloseum",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495658763/qf87uhvgfpaciar5y5qf.jpg",
+  description: ""
+)
+
+o19 = Photo.create(
+  user_id: otto.id,
+  title: "On a River Boat",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495658799/hjoaqh10bjzzgntnbzlz.jpg",
+  description: ""
+)
+
+o20 = Photo.create(
+  user_id: otto.id,
+  title: "France",
+  url: "http://res.cloudinary.com/da6jfurzj/image/upload/v1495658822/zegsqkxxrlmyccrez08r.jpg",
+  description: ""
+)
+
+#####################################################################################################################
