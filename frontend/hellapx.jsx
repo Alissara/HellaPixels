@@ -13,26 +13,26 @@ import Root from './components/root';
 // window.logout = logout;
 // window.signup = signup;
 
-import { fetchPhotos,
-         fetchPhoto,
-         createPhoto,
-         updatePhoto,
-         deletePhoto,
-         fetchHomePhotos } from './actions/photo_actions';
-window.fetchPhotos = fetchPhotos;
-window.fetchPhoto = fetchPhoto;
-window.createPhoto = createPhoto;
-window.updatePhoto = updatePhoto;
-window.deletePhoto = deletePhoto;
-window.fetchHomePhotos = fetchHomePhotos;
-
-import { fetchUser, updateUser } from './actions/user_actions';
-window.fetchUser = fetchUser;
-window.updateUser = updateUser;
-
-import { createFollow, deleteFollow } from './actions/user_actions';
-window.createFollow = createFollow;
-window.deleteFollow = deleteFollow;
+// import { fetchPhotos,
+//          fetchPhoto,
+//          createPhoto,
+//          updatePhoto,
+//          deletePhoto,
+//          fetchHomePhotos } from './actions/photo_actions';
+// window.fetchPhotos = fetchPhotos;
+// window.fetchPhoto = fetchPhoto;
+// window.createPhoto = createPhoto;
+// window.updatePhoto = updatePhoto;
+// window.deletePhoto = deletePhoto;
+// window.fetchHomePhotos = fetchHomePhotos;
+//
+// import { fetchUser, updateUser } from './actions/user_actions';
+// window.fetchUser = fetchUser;
+// window.updateUser = updateUser;
+//
+// import { createFollow, deleteFollow } from './actions/user_actions';
+// window.createFollow = createFollow;
+// window.deleteFollow = deleteFollow;
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Test - remove later
-  window.store = store;
+  // window.store = store;
 
   const root = document.getElementById('root');
   Modal.setAppElement(document.body);
