@@ -17,7 +17,7 @@ class Splash extends React.Component {
     		<section className="hero-text">
     				<h1>Home to everyone's best photos</h1>
     				<h4>Showcase your work and stay inspired</h4>
-    				<button onClick={this.loadDemo}>Demo!</button>
+    				<button onClick={this.loadDemo}>Demo</button>
     		</section>
     	</section>
     );

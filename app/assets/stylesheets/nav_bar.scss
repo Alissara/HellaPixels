@@ -52,11 +52,17 @@
   padding: 7px 7px;
   border: 1px solid $charcoal;
   margin: 3px 3px;
-  font-size: 14px;
   width: 75px;
   text-align: center;
   vertical-align: center;
-  color: $charcoal;
+
+  background-color: $charcoal;
+  color: $linen;
+  font-size: 10px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-radius: 2px;
+  letter-spacing: 2px;
 }
 
 .home-nav-right > .header-name {
@@ -99,7 +105,7 @@
 .login-signup > button:hover,
 .home-nav-right > a:hover,
 .header-upload:hover {
-  background-color: $charcoal;
+  background-color: $darkest-gray;
   color: $linen;
   cursor: pointer;
 }

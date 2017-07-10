@@ -6,7 +6,7 @@
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-  height: 800px;
+  height: 700px;
 }
 
 .hero-text {
@@ -32,21 +32,28 @@
 
 .hero-text > button {
   padding: 10px;
-  border: 2px solid $charcoal;
+  // border: 2px solid $charcoal;
   background: rgba(255, 255, 255, 0.15);
-  color: $charcoal;
   font-family: sans-serif;
-  font-size: 15px;
+  font-size: 11px;
   width: 75px;
-  font-weight: 600;
+  font-weight: 300;
+
+  background-color: $charcoal;
+  color: $linen;
+  text-transform: uppercase;
+  border-radius: 2px;
+  letter-spacing: 2px;
 }
 
 .hero-text > button:hover,
 .foot-right a:hover {
-  background-color: $charcoal;
+  background-color: $darkest-gray;
   color: $linen;
   cursor: pointer;
-  font-weight: 300;
+
+  border-radius: 2px;
+
 }
 
 .footer {
@@ -77,8 +84,11 @@
 }
 
 .foot-right a {
-  font-size: 14px;
+  font-size: 11px;
+  // font-weight: bolder;
   justify-content: space-around;
   padding: 10px;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
