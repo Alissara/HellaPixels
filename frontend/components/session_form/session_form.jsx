@@ -118,7 +118,7 @@ class SessionForm extends React.Component {
               {this.renderErrors()}
 
               <div className="login-form">
-                <br/>
+
                 <label htmlFor="un"></label>
                 <br/>
                 <input id="un"
@@ -128,9 +128,9 @@ class SessionForm extends React.Component {
                   className="login-input"
                   placeholder="Username"
                 />
-                <br/>
+
                 <label htmlFor="pw"></label>
-                <br/>
+                
                 <input id="pw"
                   type="password"
                   value={this.state.password}

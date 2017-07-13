@@ -26,7 +26,7 @@ $sans-serif: sans-serif;
 $raleway: 'Raleway', sans-serif;
 
 @import "css_reset"; // 1
-@import url('https://fonts.googleapis.com/css?family=Raleway'); // 2
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,800'); // 2
 @import "nav_bar"; // 3
 @import "splash"; // 4
 @import "auth_form"; // 5

@@ -28,6 +28,10 @@
 //   font-weight: bold;
 // }
 
+.login-form-box > h3 {
+  font-size: 20px;
+}
+
 .login-form-box > h3,
 .login-form-box > ul {
   width: auto;
@@ -74,8 +78,8 @@
 }
 
 .login-form button:hover {
-  background-color: $charcoal;
-  color: $linen;
+  background-color: $linen;
+  color: $charcoal;
 }
 
 .login-form > label {
@@ -93,9 +97,14 @@
   background-color: black;
   color: $linen;
   font-size: 14px;
+  padding: 10px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
 }
 
 .login-form input:focus {
+  outline: none;
   border-bottom: 2px $linen solid;
   box-shadow: rgba(0, 0, 0, 0);
 }
@@ -116,5 +125,5 @@
 }
 
 .login-form a > p:hover {
-  color: lightblue;
+  color: $linen;
 }
