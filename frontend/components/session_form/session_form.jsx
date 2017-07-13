@@ -110,7 +110,7 @@ class SessionForm extends React.Component {
               <button onClick={this.closeModal}><i className="fa fa-times" aria-hidden="true"></i></button>
             </div>
 
-            
+
             <form className="login-form-box">
                 <br/>
               {this.formHeader()}
@@ -119,22 +119,24 @@ class SessionForm extends React.Component {
 
               <div className="login-form">
                 <br/>
-                <label htmlFor="un">Username</label>
+                <label htmlFor="un"></label>
                 <br/>
                 <input id="un"
                   type="text"
                   value={this.state.username}
                   onChange={this.update('username')}
                   className="login-input"
+                  placeholder="Username"
                 />
                 <br/>
-                <label htmlFor="pw">Password</label>
+                <label htmlFor="pw"></label>
                 <br/>
                 <input id="pw"
                   type="password"
                   value={this.state.password}
                   onChange={this.update('password')}
                   className="login-input"
+                  placeholder="Password"
                 />
                 <br/>
                 <button onClick={this.handleSubmit}>{this.formButton()}</button>

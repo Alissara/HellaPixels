@@ -16,9 +16,12 @@ const style = {
     margin          : 'auto',
     width           : '300px',
     height          : '500px',
-    border          : '1px solid #ccc',
+    // border          : '1px solid #ccc',
+    border          : '1px solid #000',
     padding         : '30px 50px',
     zIndex          : 11,
+
+    backgroundColor : '#000000',
 
     // opacity         : '',
     // transition      : 'opacity 2s'
