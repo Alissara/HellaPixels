@@ -3,7 +3,6 @@
   z-index: 10;
   background-color: white;
   width: 100%;
-
 }
 
 .navbar {
@@ -45,8 +44,7 @@
   font-family: $raleway;
 }
 
-.login-signup > button,
-.home-nav-right > a {
+.login-signup > button {
   display: flex;
   justify-content: center;
   padding: 7px 7px;
@@ -54,7 +52,6 @@
   margin: 3px 3px;
   width: 75px;
   text-align: center;
-  vertical-align: center;
 
   background-color: $charcoal;
   color: $linen;
@@ -64,46 +61,117 @@
   letter-spacing: 2px;
 }
 
-.home-nav-right > .header-name {
+.home-nav-right > .uploadbtn {
   display: flex;
   justify-content: center;
-  padding: 3px 3px;
   border: 1px solid $charcoal;
-  margin: 3px 3px;
-  font-size: 14px;
-  width: 100px;
-  text-align: center;
-  vertical-align: center;
-  color: $charcoal;
-}
-
-.home-nav-right > .header-name > img {
-  width: 25px;
-  height: 25px;
-  border: 1px solid gray;
-}
-
-.home-nav-right > .header-name > p {
-  padding-left: 5px;
-  padding-top: 4px;
-}
-
-.header-upload {
-  display: flex;
-  justify-content: center;
-  padding: 1px 1px;
-  border: 1px solid $charcoal;
-  margin: 3px 3px;
+  margin-right: 17px;
+  margin-top: 5px;
   font-size: 24px;
-  width: 40px;
+  width: 29px;
+  height: 28px;
   text-align: center;
   vertical-align: center;
-  color: $charcoal;
+  color: $linen;
+  background-color: $charcoal;
+  // border-radius: 2px;
 }
 
-.login-signup > button:hover,
-.home-nav-right > a:hover,
-.header-upload:hover {
+.home-nav-right > .uploadbtn:hover {
+  cursor: pointer;
+  background-color: $darkest-gray;
+}
+
+.home-nav-right > .dropbtn {
+  position: relative;
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.home-nav-right img {
+  width: 30px;
+  height: 30px;
+}
+
+.dropbtn img:hover {
+  cursor: pointer;
+}
+
+.dropbtn:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: -38px;
+  top: 36px;
+  background-color: $lightest-gray;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.dropdown-content button {
+  display: flex;
+}
+
+.dropdown-content > a,
+.dropdown-content > button {
+  display: flex;
+  // justify-content: center;
+  padding: 15px 7px;
+  border-bottom: 1px solid $darker-gray;
+  // text-align: center;
+  // vertical-align: center;
+  color: $charcoal;
+
+
+}
+
+.dropdown-content a:hover,
+.dropdown-content button:hover {
+  background-color: $charcoal;
+  color: $linen;
+  cursor: pointer;
+}
+
+.dropdown-content i {
+  margin: 0px 7px;
+}
+
+.dropdown-content p {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-top: 2px;
+  // font-weight: bold;
+}
+
+
+// .home-nav-right > .header-name > p {
+//   padding-left: 5px;
+//   padding-top: 4px;
+// }
+
+// .header-upload {
+//   display: flex;
+//   justify-content: center;
+//   padding: 1px 1px;
+//   border: 1px solid $charcoal;
+//   margin: 3px 3px;
+//   font-size: 24px;
+//   width: 40px;
+//   text-align: center;
+//   vertical-align: center;
+//   color: $linen;
+//   background-color: $charcoal;
+//   border-radius: 2px;
+// }
+
+.login-signup > button:hover {
   background-color: $darkest-gray;
   color: $linen;
   cursor: pointer;

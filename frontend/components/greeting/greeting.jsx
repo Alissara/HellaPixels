@@ -95,13 +95,40 @@ class Greeting extends React.Component {
     const {currentUser, logout} = this.props;
     return(
       <nav className="home-nav-right">
-        <Link to={`/users/${currentUser.id}`} className="header-name">
-          <img src={currentUser.profile_url}/>
-          <p>{currentUser.username}</p>
-        </Link>
-        <Link to="/" className="header-button" onClick={logout}>Log Out</Link>
-        <button className="header-upload" onClick={this.upload}>
-          <i className="fa fa-cloud-upload" aria-hidden="true"></i>
+        <div className="dropbtn"><img src={currentUser.profile_url}/>
+
+
+          <div className="dropdown-content">
+            <Link to={`/users/${currentUser.id}`}>
+              <button className="header-name">
+                <i className="fa fa-user-circle-o" aria-hidden="true"></i>
+                <p>{currentUser.username}</p>
+              </button>
+            </Link>
+
+            <Link to="/home">
+              <button className="header-homefeed">
+                <i className="fa fa-home" aria-hidden="true"></i>
+                <p>Home Feed</p>
+              </button>
+            </Link>
+
+            <button className="header-upload" onClick={this.upload}>
+                <i className="fa fa-cloud-upload" aria-hidden="true"></i>
+                <p>Upload</p>
+            </button>
+
+            <Link to="/" onClick={logout}>
+              <button className="header-button">
+                <i className="fa fa-sign-out" aria-hidden="true"></i>
+                <p>Log Out</p>
+              </button>
+            </Link>
+          </div>
+
+        </div>
+        <button className="uploadbtn" onClick={this.upload}>
+            <i className="fa fa-cloud-upload" aria-hidden="true"></i>
         </button>
 
         <Modal
