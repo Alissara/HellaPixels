@@ -39,6 +39,8 @@
 .user-info h1 {
   font-size: 25px;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .user-info p {
@@ -58,11 +60,11 @@
   text-align: center;
   margin: 5px 10px;
   border: 1px solid $charcoal;
-  padding: 5px 10px;
+  padding: 12px 12px;
 
   background-color: $charcoal;
   color: $linen;
-  font-size: 10px;
+  font-size: 11px;
   text-transform: uppercase;
   border-radius: 2px;
   letter-spacing: 2px;
@@ -72,7 +74,7 @@
 .edit-user-button > button:hover,
 .follow-button > button:hover {
   color: $linen;
-  background-color: $charcoal;
+  background-color: $darkest-gray;
   cursor: pointer;
 }
 
@@ -82,7 +84,6 @@
 .user-edit-form {
   display: flex;
   flex-direction: column;
-
 }
 
 .user-edit-form {
@@ -92,16 +93,25 @@
 .user-edit-form > h1 {
   width: 100%;
   padding: 5px 0px;
-  background-color: $charcoal;
-  color: $linen;
+  // background-color: $charcoal;
+  color: black;
   font-weight: bold;
   font-size: 20px;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  // border-bottom: 1px solid $charcoal;
+}
+
+.user-edit-form > label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .user-edit-form textarea {
-  height: 100px;
-  width: 400px;
+  height: 75px;
+  width: 300px;
 }
 
 .user-edit-form img {
@@ -115,14 +125,23 @@
 
 .user-edit-form > button {
   margin: 10px;
-  padding: 2px 5px;
-  color: $charcoal;
+  padding: 12px 0px;
   border: 1px solid $charcoal;
+
+  background-color: $charcoal;
+  color: $linen;
+  font-size: 11px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  letter-spacing: 2px;
+  width: 250px;
+  text-align: center;
+
 }
 
 .user-edit-form > button:hover {
   color: $linen;
-  background-color: $charcoal;
+  background-color: $darkest-gray;
   cursor: pointer;
 }
 
@@ -130,7 +149,7 @@
   font-size: 20px;
 }
 
-.user-edit-container > button:hover {
+.user-edit-container > button i:hover {
   color: red;
   cursor: pointer;
 }

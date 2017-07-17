@@ -252,10 +252,18 @@
 .update-button button,
 .create-button button,
 .error-upload-button button {
-  padding: 2px 5px;
-  color: $charcoal;
+  padding: 10px 10px;
   border: 1px solid $charcoal;
   margin-right: 5px;
+
+  background-color: $charcoal;
+  color: $linen;
+  font-size: 10px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  letter-spacing: 2px;
+  width: 60px;
+  text-align: center;
 }
 
 .edit-button button:hover,
@@ -263,6 +271,6 @@
 .create-button button:hover,
 .error-upload-button button:hover {
   color: $linen;
-  background-color: $charcoal;
+  background-color: $darkest-gray;
 	cursor: pointer;
 }
