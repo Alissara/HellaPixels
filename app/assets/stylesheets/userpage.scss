@@ -59,6 +59,13 @@
   margin: 5px 10px;
   border: 1px solid $charcoal;
   padding: 5px 10px;
+
+  background-color: $charcoal;
+  color: $linen;
+  font-size: 10px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  letter-spacing: 2px;
 }
 
 .follow-buttons > button:hover,
