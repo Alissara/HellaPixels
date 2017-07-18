@@ -57,7 +57,9 @@ class HomeItem extends React.Component {
                 <header className="photo-user-info" id="home">
                   <Link to={`/users/${photo.user_id}`}>
                     <img src={photo.profile_url}/>
-                    <h1>{photo.username}</h1>
+                    <div className="username">
+                      <h1>{photo.username}</h1>
+                    </div>
                   </Link>
                 </header>
 

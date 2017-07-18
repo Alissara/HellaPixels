@@ -114,7 +114,9 @@ class PhotoIndexItem extends React.Component {
               <aside className="photo-info">
                 <header className="photo-user-info">
                   <img src={user.profile_url}/>
-                  <h1>{user.username}</h1>
+                  <div className="username">
+                    <h1>{user.username}</h1>
+                  </div>
                 </header>
 
                 <figcaption className="photo-details">
