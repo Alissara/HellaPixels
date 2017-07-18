@@ -185,10 +185,11 @@ class UserPage extends React.Component {
             <form className="user-edit-form">
               <h1>Edit User Profile</h1>
                 <br/>
-              <label htmlFor="bio">Bio</label>
-              <textarea id="bio"
-                value={this.state.bio}
-                onChange={this.update('bio')} />
+              <img src={this.state.cover_url} />
+              <button onClick={this.uploadCover}>
+                <i className="fa fa-cloud-upload" aria-hidden="true"></i>
+                Upload Cover Image
+              </button>
                 <br/>
               <img src={this.state.profile_url} />
               <button onClick={this.uploadProfile}>
@@ -196,11 +197,10 @@ class UserPage extends React.Component {
                 Upload Profile Image
               </button>
                 <br/>
-              <img src={this.state.cover_url} />
-              <button onClick={this.uploadCover}>
-                <i className="fa fa-cloud-upload" aria-hidden="true"></i>
-                Upload Cover Image
-              </button>
+              <label htmlFor="bio">Bio</label>
+              <textarea id="bio"
+                value={this.state.bio}
+                onChange={this.update('bio')} />
                 <br/>
             </form>
               <div className="update-button">

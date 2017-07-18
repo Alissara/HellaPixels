@@ -93,7 +93,8 @@
 .user-edit-form > h1 {
   width: 100%;
   padding: 5px 0px;
-  margin: 0px 100px;
+  margin-bottom: 10px;
+  // margin: 0px 100px;
   // background-color: $charcoal;
   color: black;
   font-weight: bold;
@@ -102,7 +103,7 @@
   text-transform: uppercase;
   // text-decoration: underline;
   letter-spacing: 1px;
-  border-bottom: 1px solid $charcoal;
+  // border-bottom: 1px solid $charcoal;
 }
 
 .user-edit-form > label {

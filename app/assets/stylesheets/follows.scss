@@ -24,17 +24,18 @@
   color: $charcoal;
   padding: 5px 0px;
   margin: 7px 55px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
 
-  border-bottom: 1px solid black;
+  // border-bottom: 1px solid black;
 
 }
 
 .follows-container li a {
   display: flex;
   flex-direction: row;
-  margin: 10px 0px;
+  margin: 10px 20px;
   align-items: center;
 }
 
@@ -44,15 +45,16 @@
 }
 
 
-.follows-container li:hover {
-  background-color: $light-gray;
+.follows-container li a:hover {
+  background-color: $charcoal;
+  color: $linen;
 }
 
 
 .follows-container img {
   width: 40px;
   height: 40px;
-  margin: 0px 20px;
+  margin-right: 20px;
 }
 
 
