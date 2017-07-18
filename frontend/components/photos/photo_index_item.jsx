@@ -91,7 +91,7 @@ class PhotoIndexItem extends React.Component {
         </a>
         <div className="overlay" onClick={this.openShowModal}>
           <div className="text">
-            {photo.title} by {user.username}
+            {photo.title}
           </div>
         </div>
 

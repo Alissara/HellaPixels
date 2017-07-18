@@ -50,17 +50,16 @@
 .text {
   white-space: nowrap;
   color: $linen;
-  font-size: 14px;
+  font-size: 11px;
   position: absolute;
   // overflow: hidden;
   top: 50%;
   left: 10px;
   // transform: translate(-50%, -50%);
   // -ms-transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-
-
-
 
 @media (max-width: 1200px) {
   .grid,
