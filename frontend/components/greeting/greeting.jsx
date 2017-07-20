@@ -147,7 +147,6 @@ class Greeting extends React.Component {
               </figure>
               <aside className="photo-info">
                 <form className="photo-form-box">
-                    <br/>
                   <h1>Create Photo</h1>
                     <br/>
                   {this.renderErrors()}
@@ -164,11 +163,9 @@ class Greeting extends React.Component {
                     value={this.state.description}
                     onChange={this.update('description')}
                   />
-
                 </form>
                   <div className="create-button">
                     <button onClick={this.closeModal}>Cancel</button>
-                    <br/>
                     <button onClick={this.uploadPhoto}>Save</button>
                   </div>
               </aside>

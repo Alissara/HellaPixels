@@ -40,6 +40,19 @@ class UserPage extends React.Component {
 
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.user.id !== nextProps.user.id) {
+      this.setState({
+        id: nextProps.user.id,
+        bio: nextProps.user.bio,
+        profile_url: nextProps.user.profile_url,
+        cover_url: nextProps.user.cover_url,
+        followers: nextProps.followers,
+        followings: nextProps.followings
+      });
+    }
+  }
+
   openModal() {
     this.setState({ modalOpen: true });
   }

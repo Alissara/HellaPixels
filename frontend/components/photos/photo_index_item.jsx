@@ -152,7 +152,6 @@ class PhotoIndexItem extends React.Component {
                   <br/>
 
 
-
                   <label htmlFor="title">Title</label>
                   <input id="title"
                     type="text"
