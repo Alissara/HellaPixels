@@ -25,11 +25,11 @@ class Greeting extends React.Component {
 
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.photos.length !== this.props.photos.length) {
-      this.closeModal();
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.errors.length === 0) {
+  //
+  //   }
+  // }
 
   upload(e) {
     e.preventDefault();
@@ -49,7 +49,10 @@ class Greeting extends React.Component {
   uploadPhoto(e) {
     e.preventDefault();
     this.props.createPhoto(this.state);
-    this.props.history.push(`/users/${this.props.currentUser.id}`);
+    if (this.state.title !== '') {
+      this.closeModal();
+      this.props.history.push(`/users/${this.props.currentUser.id}`);
+    }
   }
 
   openModal() {
@@ -148,7 +151,6 @@ class Greeting extends React.Component {
               <aside className="photo-info">
                 <form className="photo-form-box">
                   <h1>Create Photo</h1>
-                    <br/>
                   {this.renderErrors()}
                     <br/>
                   <label htmlFor="title">Title</label>
