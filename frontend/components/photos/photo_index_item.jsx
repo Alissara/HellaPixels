@@ -149,9 +149,8 @@ class PhotoIndexItem extends React.Component {
               <aside className="photo-info">
                 <form className="photo-form-box">
                   <h1>Edit Photo</h1>
+                  
                   <br/>
-
-
                   <label htmlFor="title">Title</label>
                   <input id="title"
                     type="text"
