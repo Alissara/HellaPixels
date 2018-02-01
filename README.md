@@ -1,8 +1,5 @@
 # HellaPixels
 
-[HellaPixels Live][heroku]
-
-[heroku]: http://hellapixels.herokuapp.com/
 
 HellaPixels is a full-stack photo sharing web application inspired by 500px. It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React-Redux on the frontend.
 
